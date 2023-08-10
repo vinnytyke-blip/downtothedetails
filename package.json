@@ -1,0 +1,13 @@
+{
+  "name": "downtothedetailsllc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:prod": "cd client && npm install && cd ../server && npm install",
+    "build:prod": "cd client && npm run build",
+    "deploy:prod": "cd server && npm start"
+  },
+  "author": "",
+  "license": "ISC"
+}
