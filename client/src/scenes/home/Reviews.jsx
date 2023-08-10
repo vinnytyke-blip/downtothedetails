@@ -23,7 +23,7 @@ const Reviews = ({ apiKey }) => {
   const fetchReviews = async () => {
     console.log('Calling fetchReviews...');
     try {
-      const response = await fetch(`${BASE_URL}/api/reviews?apiKey=` + apiKey);
+      const response = await fetch(`/api/reviews?apiKey=` + apiKey);
       const data = await response.json();
 
       console.log('Response from server:', data);
