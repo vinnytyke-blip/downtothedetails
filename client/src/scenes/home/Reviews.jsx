@@ -7,8 +7,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
 
-const BASE_URL = process.env.SITE_URL || 'http://localhost:5001'
-
 const Reviews = ({ apiKey }) => {
   const [reviews, setReviews] = useState([]);
   const [reviewDisplay, setReviewDisplay] = useState(false);

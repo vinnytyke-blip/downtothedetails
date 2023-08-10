@@ -19,7 +19,8 @@ app.get('/api/reviews', async (req, res) => {
 
     try {
         const response = await fetch(
-            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${apiKey}&input=DownTo%20The%20Details&inputtype=textquery`
+            `https://maps.googleapis.com/maps/api/place/textsearch/json?key=${apiKey}&query=DownTo%20The%20Details`
+           //https://maps.googleapis.com/maps/api/place/textsearch/json?key=${apiKey}&query=DownTo%20The%20Details
         );
 
         const data = await response.json();
