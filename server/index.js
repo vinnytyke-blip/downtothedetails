@@ -18,16 +18,9 @@ app.get('/api/reviews', async (req, res) => {
     const { apiKey } = req.query;
 
     try {
-        const position = await new Promise((resolve, reject) => {
-            navigator.geolocation.getCurrentPosition(resolve, reject);
-        });
-
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-
-        // Use geolocation data in the Place Search API request
         const response = await fetch(
-            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${apiKey}&input=Down%20To%20The%20Details%20L.L.C.&inputtype=textquery&locationbias=point:${latitude},${longitude}`
+            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${apiKey}&input=Down%20To%20The%20Details%20L.L.C.&inputtype=textquery`
+            //https://downtothedetailsllc-16467d68fd94.herokuapp.com/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw&query=DownTo%20The%20Details
         );
 
         const data = await response.json();
