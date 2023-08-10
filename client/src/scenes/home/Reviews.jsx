@@ -14,7 +14,7 @@ const Reviews = ({ apiKey }) => {
   const scrollContainerRef = useRef();
   const [showGradient, setShowGradient] = useState(true);
 
-  const BASE_URL = process.env.SITE_URL || 'http://localhost:5001';
+  const BASE_URL = process.env.SITE_NEW_URL || 'http://localhost:5001';
 
   useEffect(() => {
     fetchReviews();
@@ -23,7 +23,7 @@ const Reviews = ({ apiKey }) => {
   const fetchReviews = async () => {
     console.log('Calling fetchReviews...');
     try {
-      const response = await fetch('https://downtothedetailsllc-16467d68fd94.herokuapp.com' + '/api/reviews?apiKey=' + apiKey);
+      const response = await fetch(BASE_URL + '/api/reviews?apiKey=' + apiKey);
       const data = await response.json();
 
       console.log('Response from server:', data);
