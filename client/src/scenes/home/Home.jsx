@@ -5,8 +5,7 @@ import Services from "./Services";
 import Reviews from "./Reviews";
 
 const Home = () => {
-  //const apiKey2 = 'AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw';
-  const apiKey = process.env.API_KEY;
+  const apiKey = 'AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw';
   return (
     <>
       <MainCarousel />
