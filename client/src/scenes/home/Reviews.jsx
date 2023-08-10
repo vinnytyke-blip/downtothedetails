@@ -14,6 +14,8 @@ const Reviews = ({ apiKey }) => {
   const scrollContainerRef = useRef();
   const [showGradient, setShowGradient] = useState(true);
 
+  const BASE_URL = process.env.SITE_URL || 'http://localhost:5001'
+
   useEffect(() => {
     fetchReviews();
   }, [apiKey]);
@@ -21,7 +23,7 @@ const Reviews = ({ apiKey }) => {
   const fetchReviews = async () => {
     console.log('Calling fetchReviews...');
     try {
-      const response = await fetch('/api/reviews?apiKey=' + apiKey);
+      const response = await fetch(BASE_URL + '/api/reviews?apiKey=' + apiKey);
       const data = await response.json();
 
       console.log('Response from server:', data);
