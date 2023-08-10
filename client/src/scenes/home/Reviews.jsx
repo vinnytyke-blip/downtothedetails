@@ -14,7 +14,7 @@ const Reviews = ({ apiKey }) => {
   const scrollContainerRef = useRef();
   const [showGradient, setShowGradient] = useState(true);
 
-  const BASE_URL = process.env.SITE_URL || 'http://localhost:5001'
+  const BASE_URL = process.env.SITE_URL
 
   useEffect(() => {
     fetchReviews();
