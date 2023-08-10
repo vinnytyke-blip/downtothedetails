@@ -23,7 +23,7 @@ const Reviews = ({ apiKey }) => {
   const fetchReviews = async () => {
     console.log('Calling fetchReviews...');
     try {
-      const response = await fetch(`${BASE_URL}/api/reviews?apiKey=${apiKey}`, {
+      const response = await fetch(`https://downtothedetailsllc-16467d68fd94.herokuapp.com/api/reviews?apiKey=${apiKey}`, {
         headers: {
           Accept: 'application/json', // Set the Accept header for JSON response
         },
