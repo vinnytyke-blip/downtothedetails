@@ -19,7 +19,7 @@ app.get('/api/reviews', async (req, res) => {
 
     try {
         const response = await fetch(
-            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${apiKey}&input=DownTo%20The%20Details&inputtype=textquery`
+            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${apiKey}&input=Down%20To%20The%20Details%20L.L.C.&inputtype=textquery`
             //https://downtothedetailsllc-16467d68fd94.herokuapp.com/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw&query=DownTo%20The%20Details
         );
 
