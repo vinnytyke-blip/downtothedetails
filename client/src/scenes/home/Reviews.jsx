@@ -7,6 +7,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
 
+const BASE_URL = process.env.SITE_URL || 'http://localhost:5001'
+
 const Reviews = ({ apiKey }) => {
   const [reviews, setReviews] = useState([]);
   const [reviewDisplay, setReviewDisplay] = useState(false);
@@ -21,7 +23,7 @@ const Reviews = ({ apiKey }) => {
   const fetchReviews = async () => {
     console.log('Calling fetchReviews...');
     try {
-      const response = await fetch('http://localhost:5001/api/reviews?apiKey=' + apiKey);
+      const response = await fetch(`${BASE_URL}/api/reviews?apiKey=` + apiKey);
       const data = await response.json();
 
       console.log('Response from server:', data);
