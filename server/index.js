@@ -29,7 +29,7 @@ app.get('/api/reviews', async (req, res) => {
         if (data.candidates && data.candidates.length > 0) {
             const placeId = data.candidates[0].place_id;
             const detailsResponse = await fetch(
-                `https://maps.googleapis.com/maps/api/place/details/json?key=${apiKey}&place_id=${placeId}&fields=reviews`
+                `https://maps.googleapis.com/maps/api/place/details/json?key=${apiKey}&place_id=ChIJN2hmQkVnbKYRs5gVMNjySYo&fields=reviews`
             );
 
             const detailsData = await detailsResponse.json();
