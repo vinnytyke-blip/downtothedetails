@@ -68,10 +68,10 @@ const Reviews = ({ apiKey }) => {
     <div id="reviews">
       <ScrollLink to="reviews" smooth={true} duration={500} className="nav-link" offset={-100}>
         <Button
-          variant="contained"
+          variant="containedu"
           fullWidth
           style={{
-            backgroundColor: '#0CAFFF'
+            backgroundColor: '#808080'
           }}
           onClick={handleClick}
         >

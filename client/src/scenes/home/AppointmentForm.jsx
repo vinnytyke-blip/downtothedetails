@@ -20,7 +20,7 @@ const AppointmentForm = () => {
         display="flex"
         alignItems="center"
         backgroundColor="#F2F2F2"
-        borderRadius='8px'
+        borderRadius="0 0 8px 8px"
       >
         <InputBase
           sx={{ ml: 1, flex: 1 }}
@@ -33,7 +33,7 @@ const AppointmentForm = () => {
           Subscribe
         </Typography>
       </Box>
-    </Box>
+    </Box >
   );
 }
 

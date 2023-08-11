@@ -73,10 +73,10 @@ const Quote = () => {
     <div id="quote">
       <ScrollLink to="quote" smooth={true} duration={500} className="nav-link" offset={-150}>
         <Button
-          variant="contained"
+          variant="containedd"
           fullWidth
           style={{
-            backgroundColor: '#0CAFFF'
+            backgroundColor: '#808080'
           }}
           onClick={handleClick}
         >
@@ -164,7 +164,7 @@ const Quote = () => {
               <Button
                 variant="filled"
                 style={{
-                  backgroundColor: '#0CAFFF',
+                  backgroundColor: 'black',
                 }}
                 onClick={generateQuote}
               >

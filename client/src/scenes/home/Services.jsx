@@ -160,10 +160,17 @@ const Services = () => {
           display='flex'
           alignItems='center'
           justifyContent='center'
-          margin='20px auto'
+          margin='30px auto'
         >
           <a href="https://calendly.com/down2the_detail/estimate?month=2023-07" target="_blank" rel="noopener noreferrer">
-            <Button variant="contained" >SCHEDULE AN APPOINMENT</Button>
+            <Button 
+              variant="containeda"
+              style={{
+                backgroundColor: 'black'
+              }} 
+            >
+              <Typography sx={{ color: 'white' }}>SCHEDULE AN APPOINMENT</Typography>
+            </Button>
           </a>
         </Box>
       </Box>
