@@ -5,7 +5,7 @@ import Services from "./Services";
 import Reviews from "./Reviews";
 
 const Home = () => {
-  const apiKey = 'AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw';
+  const apiKey = process.env.REACT_APP_API_KEY;
   return (
     <>
       <MainCarousel />
