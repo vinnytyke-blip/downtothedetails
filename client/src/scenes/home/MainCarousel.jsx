@@ -6,6 +6,8 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import AppointmentForm from "./AppointmentForm";
 import animationData from './popInsta.json';
 import Lottie from "lottie-react";
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import SubsribeForm from "./SubscribeForm";
 
 // imports all images from assets folder
 const importAll = (r) =>
@@ -125,7 +127,17 @@ const MainCarousel = () => {
           margin={isNonMobile ? undefined : "0 auto"}
           maxWidth={isNonMobile ? undefined : "300px"}
         >
-          <AppointmentForm />
+          <MailchimpSubscribe
+            url="https://herokuapp.us21.list-manage.com/subscribe/post?u=137654aa5e623e73f766d5b9c&amp;id=2d4ec71b58&amp;f_id=009b3ce7f0"
+            render={({ subscribe, status, message }) => (
+              <SubsribeForm
+                status={status}
+                message={message}
+                onValidated={(formData) => subscribe(formData)}
+              />
+            )}
+          />
+
         </Box>
       </Box>
     </div>
