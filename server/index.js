@@ -52,6 +52,8 @@ app.get('/api/reviews', async (req, res) => {
     }
 });
 
+const config = require('../client/src/scenes/home/config');
+
 app.use((req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });

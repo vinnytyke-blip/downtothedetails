@@ -137,7 +137,7 @@ const MainCarousel = () => {
               />
             )}
           />
-
+          
         </Box>
       </Box>
     </div>
