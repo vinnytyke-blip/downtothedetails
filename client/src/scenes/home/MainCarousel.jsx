@@ -22,6 +22,7 @@ export const heroTextureImports = importAll(
 
 const MainCarousel = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
+  const MAIL_URL = process.env.REACT_APP_MAIL_URL;
   return (
     <div id="top">
       <Box position='relative'>
@@ -128,7 +129,7 @@ const MainCarousel = () => {
           maxWidth={isNonMobile ? undefined : "300px"}
         >
           <MailchimpSubscribe
-            url="https://herokuapp.us21.list-manage.com/subscribe/post?u=137654aa5e623e73f766d5b9c&amp;id=2d4ec71b58&amp;f_id=009b3ce7f0"
+            url={MAIL_URL}
             render={({ subscribe, status, message }) => (
               <SubsribeForm
                 status={status}
