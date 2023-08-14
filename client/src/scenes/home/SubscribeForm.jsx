@@ -33,7 +33,7 @@ const SubsribeForm = ({ status, message, onValidated }) => {
                 Subscribe To Our Newsletter
             </Typography>
             <Typography variant="h6" style={{ color: 'white' }}>
-                and receive $20 coupon for your first order when you checkout
+                and receive 10% off for your first order when you checkout
             </Typography>
             <Box
                 p="2px 4px"
