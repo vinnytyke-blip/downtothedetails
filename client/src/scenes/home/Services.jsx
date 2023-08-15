@@ -104,6 +104,8 @@ const Services = () => {
           margin='20px 30px'
           display='flex'
           flexDirection={{ xs: 'column', sm: 'row' }}
+          justifyContent={{ xs: 'center', sm: 'space-between' }}
+          alignItems={{ xs: 'center', sm: 'flex-start' }}
         >
           <Box
             display='flex'
@@ -163,11 +165,11 @@ const Services = () => {
           margin='30px auto'
         >
           <a href="https://calendly.com/down2the_detail/estimate?month=2023-07" target="_blank" rel="noopener noreferrer">
-            <Button 
+            <Button
               variant="containeda"
               style={{
                 backgroundColor: 'black'
-              }} 
+              }}
             >
               <Typography sx={{ color: 'white' }}>SCHEDULE AN APPOINMENT</Typography>
             </Button>
