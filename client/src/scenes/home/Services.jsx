@@ -128,6 +128,7 @@ const Services = () => {
                   id={`service_${index}`}
                   checked={selectedButton !== null && getInteriorServices().includes(service)}
                   readOnly
+                  style={{flexShrink: 0, marginRight: '5px', width: '15px', height: '15px'}}
                 />
                 <label htmlFor={`service_${index}`}>{service}</label>
               </div>
@@ -152,6 +153,7 @@ const Services = () => {
                   type="checkbox"
                   id={`service_${index}`}
                   checked={selectedButton !== null && getExteriorServices().includes(service)}
+                  style={{flexShrink: 0, marginRight: '5px', width: '15px', height: '15px'}}
                 />
                 <label htmlFor={`service_${index}`}>{service}</label>
               </div>
