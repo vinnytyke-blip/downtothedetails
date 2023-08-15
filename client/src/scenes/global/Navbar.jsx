@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 const importAll = (r) =>
   r.keys().reduce((acc, item) => {
@@ -40,12 +41,15 @@ function Navbar() {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Box 
-          display='flex' 
-          alignItems='center' 
+        <Box
+          display='flex'
+          alignItems='center'
           columnGap='20px'
-          onClick={() => navigate("/")}
-          sx={{ "&:hover": { cursor: "pointer" } }} 
+          onClick={() => {
+            navigate("/");
+            scroll.scrollToTop(); // Scroll to top
+          }}
+          sx={{ "&:hover": { cursor: "pointer" } }}
         >
           <img src={logo} alt="Washing" style={{ width: '150px', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
           {showTypography && (
