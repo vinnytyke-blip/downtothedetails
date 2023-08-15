@@ -164,7 +164,15 @@ const Services = () => {
           justifyContent='center'
           margin='30px auto'
         >
-          <a href="https://calendly.com/down2the_detail/estimate?month=2023-07" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://calendly.com/down2the_detail/estimate?month=2023-07"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: 'none', // Remove underlines
+              display: 'inline-block' // Make the link behave like a block element
+            }}
+          >
             <Button
               variant="containeda"
               style={{
