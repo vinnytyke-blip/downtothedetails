@@ -62,23 +62,23 @@ function Navbar() {
           display="flex"
           zIndex="2"
         >
-          <ul style={{ listStyleType: 'none', margin: 0, padding: 0, display: "flex", flexDirection: breakPoint ? "row" : "column" }}>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px' }}>
+          <ul style={{ listStyleType: 'none', margin: 0, padding: 0, display: "flex", flexDirection: breakPoint ? "row" : "column", }}>
+            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
               <ScrollLink to="services" smooth={true} duration={500} className="nav-link" offset={-100}>
                 SERVICES
               </ScrollLink>
             </li>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px' }}>
+            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
               <ScrollLink to="about" smooth={true} duration={500} className="nav-link">
                 ABOUT US
               </ScrollLink>
             </li>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px' }}>
+            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
               <ScrollLink to="quote" smooth={true} duration={500} className="nav-link">
                 QUOTE
               </ScrollLink>
             </li>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px' }}>
+            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
               <ScrollLink to="footer" smooth={true} duration={500} className="nav-link">
                 CONTACT
               </ScrollLink>

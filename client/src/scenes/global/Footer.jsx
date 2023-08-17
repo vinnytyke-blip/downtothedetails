@@ -35,7 +35,7 @@ const Footer = () => {
             </Typography>
             <Typography style={{ display: 'flex', alignItems: 'center' }}>
               <EmailIcon style={{ marginRight: '5px' }} />
-              youremail@email.com
+              down2detail602@gmail.com
             </Typography>
           </Box>
           <Box display='grid' gap='5px' textAlign='left'>
