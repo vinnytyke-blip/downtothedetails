@@ -46,23 +46,23 @@ const Quote = () => {
       setQuote("$220");
     } else if (service === "Bronze" && carType === "truck" && packageType === "full") {
       setQuote("$205");
-    } else if (service === "Gold" && carType === "car" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Gold" && carType === "car" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$149.99");
-    } else if (service === "Silver" && carType === "car" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Silver" && carType === "car" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$139.99");
-    } else if (service === "Bronze" && carType === "car" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Bronze" && carType === "car" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$129.99");
-    } else if (service === "Gold" && carType === "suv" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Gold" && carType === "suv" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$159.99");
-    } else if (service === "Silver" && carType === "suv" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Silver" && carType === "suv" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$149.99");
-    } else if (service === "Bronze" && carType === "suv" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Bronze" && carType === "suv" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$139.99");
-    } else if (service === "Gold" && carType === "truck" && packageType === "interior" || packageType === "exterior") {
-      setQuote("169.99");
-    } else if (service === "Silver" && carType === "truck" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Gold" && carType === "truck" && (packageType === "interior" || packageType === "exterior")) {
+      setQuote("$169.99");
+    } else if (service === "Silver" && carType === "truck" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$159.99");
-    } else if (service === "Bronze" && carType === "truck" && packageType === "interior" || packageType === "exterior") {
+    } else if (service === "Bronze" && carType === "truck" && (packageType === "interior" || packageType === "exterior")) {
       setQuote("$149.99");
     } else {
       setQuote("Please select valid options to get a quote.");
