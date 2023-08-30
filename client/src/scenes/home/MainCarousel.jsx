@@ -43,7 +43,7 @@ const MainCarousel = () => {
             textDecoration: 'none', // Remove underline style from the link
             boxShadow: 'none', // No shadow by default
             transition: 'box-shadow 0.3s', // Smooth transition for the hover effect
-            height: '40px'
+            height: '40px' //changing this to test git
           }}
           onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.8)'; }}
           onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; }}
