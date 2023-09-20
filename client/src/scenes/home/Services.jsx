@@ -78,7 +78,7 @@ const Services = () => {
 
   return (
     <div id='services'>
-      <Box width='100%' margin='20px auto'>
+      <Box width='100%' margin='20px auto' bgcolor='white'>
         <Box display='flex' alignItems='center' justifyContent='center'>
           <Typography variant="h2" textAlign='center'>Service Packages</Typography>
         </Box>
@@ -128,7 +128,7 @@ const Services = () => {
                   id={`service_${index}`}
                   checked={selectedButton !== null && getInteriorServices().includes(service)}
                   readOnly
-                  style={{flexShrink: 0, marginRight: '5px', width: '15px', height: '15px'}}
+                  style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
                 />
                 <label htmlFor={`service_${index}`}>{service}</label>
               </div>
@@ -153,7 +153,7 @@ const Services = () => {
                   type="checkbox"
                   id={`service_${index}`}
                   checked={selectedButton !== null && getExteriorServices().includes(service)}
-                  style={{flexShrink: 0, marginRight: '5px', width: '15px', height: '15px'}}
+                  style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
                 />
                 <label htmlFor={`service_${index}`}>{service}</label>
               </div>
@@ -170,19 +170,9 @@ const Services = () => {
             href="https://calendly.com/down2the_detail/estimate?month=2023-07"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              textDecoration: 'none', // Remove underlines
-              display: 'inline-block' // Make the link behave like a block element
-            }}
+            style={{ textDecoration: 'none', color: 'inherit' }}
           >
-            <Button
-              variant="containeda"
-              style={{
-                backgroundColor: 'black'
-              }}
-            >
-              <Typography sx={{ color: 'white' }}>SCHEDULE AN APPOINMENT</Typography>
-            </Button>
+            <Button variant="outlined">SCHEDULE AN APPOINTMENT</Button>
           </a>
         </Box>
       </Box>

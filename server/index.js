@@ -3,6 +3,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const app = express();
 const cors = require('cors');
 const path = require('path');
+const compression = require('compression');
 
 // serve up production assets
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
@@ -10,6 +11,17 @@ app.use(express.static(path.join(__dirname, '..', 'client', 'public')))
 
 app.use(express.json());
 app.use(cors());
+app.use(compression({
+    level: 6, // Compression level (0-9)
+    threshold: 1024, // Minimum response size (in bytes) to trigger compression
+    filter: (req, res) => {
+        // Add custom logic to exclude specific content types
+        if (req.headers['content-type'] === 'application/json') {
+            return false; // Do not compress JSON responses
+        }
+        return compression.filter(req, res);
+    },
+}));
 // let the react app to handle any unknown routes 
 // serve up the index.html if express does'nt recognize the route
 
@@ -18,16 +30,8 @@ app.get('/api/reviews', async (req, res) => {
     const { apiKey } = req.query;
 
     try {
-        const response = await fetch(
-            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=${apiKey}&input=Down%20To%20The%20Details%20L.L.C.&inputtype=textquery`
-            //https://downtothedetailsllc-16467d68fd94.herokuapp.com/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw&query=DownTo%20The%20Details
-        );
-
-        const data = await response.json();
-        console.log("first api fetch: ", data);
 
         if (data.candidates && data.candidates.length > 0) {
-            const placeId = data.candidates[0].place_id;
             const detailsResponse = await fetch(
                 `https://maps.googleapis.com/maps/api/place/details/json?key=${apiKey}&place_id=ChIJN2hmQkVnbKYRs5gVMNjySYo&fields=reviews`
             );

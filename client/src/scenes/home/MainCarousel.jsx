@@ -1,13 +1,12 @@
 import { Carousel } from "react-responsive-carousel";
-import { Box, IconButton, Typography, useMediaQuery } from "@mui/material";
+import { Box, IconButton, Button, Typography, useMediaQuery } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import AppointmentForm from "./AppointmentForm";
-import animationData from './popInsta.json';
-import Lottie from "lottie-react";
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import SubsribeForm from "./SubscribeForm";
+import { instaphoto } from '../../assets';
+import { satisfaction } from "../../assets";
+import React, { useEffect, useState } from 'react';
+
 
 // imports all images from assets folder
 const importAll = (r) =>
@@ -17,106 +16,219 @@ const importAll = (r) =>
   }, {});
 
 export const heroTextureImports = importAll(
-  require.context('../../assets/carousel', false, /\.(png|jpe?g|svg|)$/)
+  require.context('../../assets/herophotos', false, /\.(png|jpe?g|svg|)$/)
 );
 
-const MainCarousel = () => {
+const MainCarousel = ({ apiKey }) => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const MAIL_URL = process.env.REACT_APP_MAIL_URL;
+  const [reviews, setReviews] = useState([]);
+
+  const BASE_URL = 'http://localhost:5001'
+
+  useEffect(() => {
+    fetchReviews();
+  }, [apiKey]);
+
+  const fetchReviews = async () => {
+    console.log('Calling fetchReviews...');
+    try {
+      const response = await fetch(`${BASE_URL}/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw`, {
+        headers: {
+          Accept: 'application/json', // Set the Accept header for JSON response
+        },
+      });
+      const data = await response.json();
+
+      console.log('Response from server:', data);
+
+      setReviews(data);
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    }
+  };
+  console.log("reviews count", reviews.length)
+
   return (
     <div id="top">
-      <Box position='relative'>
-        <a
-          href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D"
-          target="_blank" // This will open the link in a new tab
-          rel="noopener noreferrer" // For security and performance reasons
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            position: 'absolute',
-            backgroundColor: "rgb(0, 0, 0, 0.4)",
-            top: '85px',
-            left: '20px',
-            zIndex: '4',
-            borderRadius: '20px',
-            textDecoration: 'none', // Remove underline style from the link
-            boxShadow: 'none', // No shadow by default
-            transition: 'box-shadow 0.3s', // Smooth transition for the hover effect
-            height: '40px' //changing this to test git
-          }}
-          onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.8)'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; }}
+      <Box
+        display='flex'
+        style={{ height: '100vh' }}
+        position='fixed'
+        justifyContent='center'
+        marginX='0' // Center horizontally
+        width={{ sm: '100vw' }} // Take up full screen width on small screens
+      >
+        <Box
+          width={{ sm: '100%', md: '60%', lg: '45%' }}
+          justifyContent='center'
+          display='flex'
+          marginX='20px'
         >
           <Box
             display='flex'
-            width='70px'
-            height='70px'
+            top='50%'
+            width={{ sm: '100%', md: '600px' }}
+            height='100%'
             alignItems='center'
             justifyContent='center'
+            zIndex='5'
           >
-            <Lottie animationData={animationData} />
+            {/* <MailchimpSubscribe
+              url={MAIL_URL}
+              render={({ subscribe, status, message }) => (
+                <SubsribeForm
+                status={status}
+                message={message}
+                onValidated={(formData) => subscribe(formData)}
+                />
+                )}
+              /> */}
+            <Box
+              columnGap='20px'
+              padding='10px'
+              margin={{ sm: 'auto' }}
+              justifyContent='center'
+
+            >
+              <Typography
+                variant="h1"
+                fontSize={['42px', '60px']}
+              >
+                Down to the details
+              </Typography>
+              {/* <Typography variant="h4" >Down to the last spec</Typography> */}
+              <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center'>
+                <Box marginTop='4px' marginRight='15px'>
+                  <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={instaphoto}
+                      alt="Instagram"
+                      width="30" // Set the width of the image as needed
+                      height="30" // Set the height of the image as needed
+                    />
+                  </a>
+                </Box>
+                <Box display='flex' alignItems='center'>
+                  <Typography marginRight='5px'>Reviews:</Typography>
+                  <Typography marginRight='5px'>15</Typography>
+                  <img
+                    src={satisfaction}
+                    alt="satisfaction"
+                    width='65'
+                    height='65'
+                  />
+                </Box>
+              </Box>
+              <Box
+                justifyContent='center'
+                display='flex'
+              >
+                <a
+                  href="https://calendly.com/down2the_detail/estimate?month=2023-07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <Button variant="outlined" sx={{ letterSpacing: '4px', borderRadius: '0', width: { sm: '100%', md: '500px' }, height: '50px' }}>
+                    SCHEDULE AN APPOINTMENT
+                  </Button>
+                </a>
+              </Box>
+            </Box>
           </Box>
-          <Typography color='white' variant="h4" ml={-1} marginRight='16px'>
-            @down2the_detail
-          </Typography>
-        </a>
-        <Box zIndex='3' width="100%">
-          <Carousel
-            infiniteLoop={true}
-            showThumbs={false}
-            showIndicators={false}
-            showStatus={false}
-            autoPlay={true}
-            interval={3000}
-            renderArrowPrev={(onClickHandler, hasPrev, label) => (
-              <IconButton
-                onClick={onClickHandler}
-                sx={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "0",
-                  color: "white",
-                  padding: "5px",
-                  zIndex: "10",
-                }}
-              >
-                <NavigateBeforeIcon sx={{ fontSize: 40 }} />
-              </IconButton>
-            )}
-            renderArrowNext={(onClickHandler, hasNext, label) => (
-              <IconButton
-                onClick={onClickHandler}
-                sx={{
-                  position: "absolute",
-                  top: "50%",
-                  right: "0",
-                  color: "white",
-                  padding: "5px",
-                  zIndex: "10",
-                }}
-              >
-                <NavigateNextIcon sx={{ fontSize: 40 }} />
-              </IconButton>
-            )}
+        </Box>
+        {isNonMobile && (
+          <Box
+            display='flex'
+            zIndex='2'
+            width='60%'
+            style={{ height: '100%', overflow: 'hidden' }}
+            sx={{
+              right: '0',
+            }}
+            marginRight='0'
           >
-            {Object.values(heroTextureImports).map((texture, index) => (
-              <Box key={`carousel-image-${index}`}>
-                <img
-                  src={texture}
-                  alt={`carousel-${index}`}
+            <Carousel
+              infiniteLoop={true}
+              showThumbs={false}
+              showIndicators={false}
+              showStatus={false}
+              autoPlay={true}
+              interval={3000}
+              renderArrowPrev={(onClickHandler, hasPrev, label) => (
+                <IconButton
+                  onClick={onClickHandler}
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "0",
+                    color: "white",
+                    padding: "25px",
+                    zIndex: "10",
+                    opacity: 0, // Initially hide the arrow
+                    transition: "opacity 0.3s", // Add a smooth transition
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "1"; // Show the arrow on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "0"; // Hide the arrow when not hovered
+                  }}
+                >
+                  <NavigateBeforeIcon sx={{ fontSize: 40 }} />
+                </IconButton>
+              )}
+              renderArrowNext={(onClickHandler, hasNext, label) => (
+                <IconButton
+                  onClick={onClickHandler}
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    right: "0",
+                    color: "white",
+                    padding: "25px",
+                    zIndex: "10",
+                    opacity: 0, // Initially hide the arrow
+                    transition: "opacity 0.3s", // Add a smooth transition
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "1"; // Show the arrow on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "0"; // Hide the arrow when not hovered
+                  }}
+                >
+                  <NavigateNextIcon sx={{ fontSize: 40 }} />
+                </IconButton>
+              )}
+            >
+              {Object.values(heroTextureImports).map((texture, index) => (
+                <Box
+                  key={`carousel-image-${index}`}
                   style={{
                     width: "100%",
-                    height: "800px",
-                    objectFit: "cover",
-                    backgroundAttachment: "fixed",
+                    height: "100vh", // Set a fixed height for the Box
+                    overflow: "hidden", // Hide any overflow from the image
                   }}
-                />
-              </Box>
-            ))}
-          </Carousel>
-        </Box>
-        <Box
+                >
+                  <img
+                    src={texture}
+                    alt={`carousel-${index}`}
+                    style={{
+                      width: "100%",
+                      height: "100%", // Set the image height to 100% to fill the parent Box
+                      objectFit: "cover",
+                      backgroundAttachment: "fixed",
+                    }}
+                  />
+                </Box>
+              ))}
+            </Carousel>
+          </Box>
+        )}
+
+        {/* <Box
           zIndex='2'
           position="absolute"
           top="23%"
@@ -127,22 +239,23 @@ const MainCarousel = () => {
           right={isNonMobile ? undefined : "0"}
           margin={isNonMobile ? undefined : "0 auto"}
           maxWidth={isNonMobile ? undefined : "300px"}
-        >
+          >
           <MailchimpSubscribe
-            url={MAIL_URL}
-            render={({ subscribe, status, message }) => (
-              <SubsribeForm
-                status={status}
-                message={message}
-                onValidated={(formData) => subscribe(formData)}
-              />
+          url={MAIL_URL}
+          render={({ subscribe, status, message }) => (
+            <SubsribeForm
+            status={status}
+            message={message}
+            onValidated={(formData) => subscribe(formData)}
+            />
             )}
-          />
-          
-        </Box>
+            />
+            
+          </Box> */}
       </Box>
     </div>
   );
 };
+
 
 export default MainCarousel;

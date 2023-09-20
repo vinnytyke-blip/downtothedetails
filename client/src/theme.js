@@ -42,13 +42,12 @@ export const theme = createTheme({
     fontSize: 14,
     h1: {
       fontFamily: ["Noto Sana", "sans-serif"].join(","),
-      fontSize: 48,
-      fontWeight: "bold",
+      // fontSize: 60,
+      marginLeft: -3,
     },
     h2: {
       fontFamily: ["Noto Sana", "sans-serif"].join(","),
       fontSize: 36,
-      fontWeight: "bold",
     },
     h3: {
       fontFamily: ["Noto Sana", "sans-serif"].join(","),
@@ -102,6 +101,12 @@ export const theme = createTheme({
           minHeight: "60px",
           fontSize: "18px",
           letterSpacing: '4px',
+        },
+        outlined: {
+          letterSpacing: '4px',
+          borderRadius: '0',
+          width: { sm: '80%', md: '500px' },
+          height: '50px'
         },
         filled: {
           letterSpacing: '4px',

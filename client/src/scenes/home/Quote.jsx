@@ -71,29 +71,10 @@ const Quote = () => {
 
   return (
     <div id="quote">
-      <ScrollLink to="quote" smooth={true} duration={500} className="nav-link" offset={-150}>
-        <Button
-          variant="containedd"
-          fullWidth
-          style={{
-            backgroundColor: '#808080'
-          }}
-          onClick={handleClick}
-        >
-          <Typography display='flex' alignItems='center'>
-            {quoteDisplay ? (
-              <KeyboardDoubleArrowDownIcon style={{ marginRight: '8px', color: 'black' }} />
-            ) : (
-              <KeyboardDoubleArrowRightIcon style={{ marginRight: '8px', color: 'white' }} />
-            )}
-            {quoteDisplay ? "HIDE QUOTE" : "GET QUOTE"}
-          </Typography>
-        </Button>
-      </ScrollLink>
-      {quoteDisplay && (
+      
         <Box
           display='flex'
-          height={breakPoint ? '400px' : '100%'}
+          height={breakPoint ? '800px' : '100%'}
           borderRadius='2px solid black'
           transition="height 2s" // Set the duration of the transition
           overflow="hidden"
@@ -233,8 +214,6 @@ const Quote = () => {
             </Box>
           </Box>
         </Box>
-      )}
-
     </div>
   );
 
