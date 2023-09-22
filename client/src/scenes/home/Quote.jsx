@@ -170,20 +170,21 @@ const Quote = () => {
               alignItems='center'
             >
               <Box
-                minHeight='150px'
-                minWidth='200px'
+                minHeight={{sm: '150px', md: '300px'}}
+                minWidth={{sm: '200px', md: '400px'}}
                 bgcolor='#c2c2c2'
                 display='flex'
                 borderRadius='8px'
                 flexDirection='column'
-                marginTop='20px'
-                marginBottom='20px'
+                marginY='20px'
                 marginLeft='20px'
+                justifyContent='space-between'
+                paddingBottom='100px'
               >
                 <Box
                   width='95%'
                   borderBottom='2px solid #F2F2F2'
-                  margin='auto'
+                  justifyContent='space-between'
                   flexDirection='row'
                 >
                   <Typography variant='h4' margin='3px auto'>
