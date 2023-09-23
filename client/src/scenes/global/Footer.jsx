@@ -15,6 +15,7 @@ const Footer = () => {
         padding="40px 0"
         textAlign="center"
         display='flex'
+        flexDirection={{sm: "column"}}
       >
         <Box
           width={breakPoint ? "80%" : "100%"}

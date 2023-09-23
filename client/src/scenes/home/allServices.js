@@ -1,66 +1,72 @@
+import { checked } from "../../assets";
 
-export const goldInteriorServices = [
-    'Interior Vacuum',
-    'Seats Vacuumed/Shampooed/ Cleaned/Disinfected',
-    'Carpets Cleaned/Spot Treatment',
-    'Floor Mats Extracted Cleaned/Shampooed',
-    'Full Interior Dust/Wipe Down/Disinfect',
-    'In-Depth Detail of the Center Console',
-    'AC Vents Cleaning',
-    'Dashboard Cleaning',
-    'Windows Cleaning',
-    'Door Panels/Jams Cleaning',
-    'All Stains Removed to the Best of Their Ability',
-    'Steam Cleaning',
-  ];
-  
-  export const goldExteriorServices = [
-    'Foam Cannon Hand Wash/Dry',
-    'Tires and Rims Cleaned/Polished',
-    'Windows Cleaned',
-    'Bug Removal',
-    'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint',
-    'Tire Shine Applied',
-    'Clay Bar Treatment',
-  ];
-  
-  export const silverInteriorServices = [
-    'Interior Vacuum',
-    'Floor Mats Extracted Cleaned/Shampooed',
-    'Carpets Cleaned/Spot Treatment',
-    'Seats Vacuumed/Shampooed/ Cleaned/Disinfected',
-    'Full Interior Dust/Wipe Down/Disinfect',
-    'In-Depth Detail of the Center Console',
-    'Steam Cleaning (if necessary)',
-    'AC Vents Cleaning',
-    'Dashboard Cleaning',
-    'Windows Cleaning',
-    'Door Panels/Jams Cleaning',
-  ];
-  
-  export const silverExteriorServices = [
-    'Foam Cannon Hand Wash/Dry',
-    'Clay Bar Treatment (if necessary)',
-    'Tires and Rims Cleaned/Polished',
-    'Windows Cleaned',
-    'Bug Removal',
-    'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint',
-  ];
-  
-  export const bronzeInteriorServices = [
-    'Interior Vacuum',
-    'Seats Vacuumed/Shampooed/ Cleaned/Disinfected',
-    'Carpets Cleaned/Spot Treatment',
-    'Full Interior Dust/Wipe Down/Disinfect',
-    'In-Depth Detail of the Center Console',
-    'Windows Cleaning',
-    'Door Panels/Jams Cleaning',
-  ];
-  
-  export const bronzeExteriorServices = [
-    'Foam Cannon Hand Wash/Dry',
-    'Tires and Rims Cleaned/Polished',
-    'Windows Cleaned',
-    'Bug Removal',
-    'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint',
-  ];
+const interiorServices = {
+  gold: [
+    { icon: checked, name: 'Interior Vacuum' },
+    { icon: checked, name: 'Seats Vacuumed/Shampooed/ Cleaned/Disinfected' },
+    { icon: checked, name: 'Carpets Cleaned/Spot Treatment' },
+    { icon: checked, name: 'Floor Mats Extracted Cleaned/Shampooed' },
+    { icon: checked, name: 'Full Interior Dust/Wipe Down/Disinfect' },
+    { icon: checked, name: 'In-Depth Detail of the Center Console' },
+    { icon: checked, name: 'AC Vents Cleaning' },
+    { icon: checked, name: 'Dashboard Cleaning' },
+    { icon: checked, name: 'Windows Cleaning' },
+    { icon: checked, name: 'Door Panels/Jams Cleaning' },
+    { icon: checked, name: 'All Stains Removed to the Best of Their Ability' },
+    { icon: checked, name: 'Steam Cleaning' },
+  ],
+  silver: [
+    { icon: checked, name: 'Interior Vacuum' },
+    { icon: checked, name: 'Floor Mats Extracted Cleaned/Shampooed' },
+    { icon: checked, name: 'Carpets Cleaned/Spot Treatment' },
+    { icon: checked, name: 'Seats Vacuumed/Shampooed/ Cleaned/Disinfected' },
+    { icon: checked, name: 'Full Interior Dust/Wipe Down/Disinfect' },
+    { icon: checked, name: 'In-Depth Detail of the Center Console' },
+    { icon: checked, name: 'Steam Cleaning (if necessary)' },
+    { icon: checked, name: 'AC Vents Cleaning' },
+    { icon: checked, name: 'Dashboard Cleaning' },
+    { icon: checked, name: 'Windows Cleaning' },
+    { icon: checked, name: 'Door Panels/Jams Cleaning' },
+  ],
+  bronze: [
+    { icon: checked, name: 'Interior Vacuum' },
+    { icon: checked, name: 'Seats Vacuumed/Shampooed/ Cleaned/Disinfected' },
+    { icon: checked, name: 'Carpets Cleaned/Spot Treatment' },
+    { icon: checked, name: 'Full Interior Dust/Wipe Down/Disinfect' },
+    { icon: checked, name: 'In-Depth Detail of the Center Console' },
+    { icon: checked, name: 'Windows Cleaning' },
+    { icon: checked, name: 'Door Panels/Jams Cleaning' },
+  ],
+};
+
+const exteriorServices = {
+  gold: [
+    { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
+    { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
+    { icon: checked, name: 'Windows Cleaned' },
+    { icon: checked, name: 'Bug Removal' },
+    { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+    { icon: checked, name: 'Tire Shine Applied' },
+    { icon: checked, name: 'Clay Bar Treatment' },
+  ],
+  silver: [
+    { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
+    { icon: checked, name: 'Clay Bar Treatment (if necessary)' },
+    { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
+    { icon: checked, name: 'Windows Cleaned' },
+    { icon: checked, name: 'Bug Removal' },
+    { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+  ],
+  bronze: [
+    { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
+    { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
+    { icon: checked, name: 'Windows Cleaned' },
+    { icon: checked, name: 'Bug Removal' },
+    { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+  ],
+};
+
+export {
+  interiorServices,
+  exteriorServices
+};

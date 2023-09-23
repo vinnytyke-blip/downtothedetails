@@ -1,6 +1,7 @@
 import instaphoto from './prophotos/instagram.png';
 import satisfaction from './prophotos/satisfaction.png';
 import portrait from './prophotos/IMG_6599.jpeg';
+import checked from './prophotos/checked.png';
 
 const testimonials = [
     {
@@ -25,5 +26,6 @@ export {
     instaphoto,
     satisfaction,
     portrait,
+    checked,
     testimonials,
 };

@@ -2,12 +2,8 @@ import { Box, Typography, Button, ButtonGroup } from "@mui/material";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
-  goldInteriorServices,
-  goldExteriorServices,
-  silverInteriorServices,
-  silverExteriorServices,
-  bronzeInteriorServices,
-  bronzeExteriorServices,
+  interiorServices,
+  exteriorServices
 } from './allServices';
 
 
@@ -23,39 +19,15 @@ const Services = () => {
   const normalSize = '16px';
   const selectedSize = '20px';
 
-  const interiorServices = [
-    'Interior Vacuum',
-    'Seats Vacuumed/Shampooed/ Cleaned/Disinfected',
-    'Carpets Cleaned/Spot Treatment',
-    'Full Interior Dust/Wipe Down/Disinfect',
-    'In-Depth Detail of the Center Console',
-    'Windows Cleaning',
-    'Door Panels/Jams Cleaning',
-    'Floor Mats Extracted Cleaned/Shampooed',
-    'AC Vents Cleaning',
-    'Dashboard Cleaning',
-    'All Stains Removed to the Best of Their Ability',
-    'Steam Cleaning',
-  ];
-
-  const exteriorServices = [
-    'Foam Cannon Hand Wash/Dry',
-    'Tires and Rims Cleaned/Polished',
-    'Windows Cleaned',
-    'Bug Removal',
-    'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint',
-    'Tire Shine Applied',
-    'Clay Bar Treatment',
-  ];
 
   const getInteriorServices = () => {
     switch (selectedButton) {
       case "Gold":
-        return goldInteriorServices;
+        return interiorServices.gold;
       case "Silver":
-        return silverInteriorServices;
+        return interiorServices.silver;
       case "Bronze":
-        return bronzeInteriorServices;
+        return interiorServices.bronze;
       default:
         return [];
     }
@@ -63,24 +35,21 @@ const Services = () => {
   const getExteriorServices = () => {
     switch (selectedButton) {
       case "Gold":
-        return goldExteriorServices;
+        return exteriorServices.gold;
       case "Silver":
-        return silverExteriorServices;
+        return exteriorServices.silver;
       case "Bronze":
-        return bronzeExteriorServices;
+        return exteriorServices.bronze;
       default:
         return [];
     }
   };
 
-  console.log("selectedButton:", selectedButton);
-  console.log("getInteriorServices():", getInteriorServices());
-
   return (
     <div id='services'>
       <Box width='100%' margin='20px auto' bgcolor='white'>
         <Box display='flex' alignItems='center' justifyContent='center'>
-          <Typography variant="h2" textAlign='center'>Service Packages</Typography>
+          <Typography variant="h2" textAlign='center' letterSpacing='3px' marginBottom='10px'>SERVICE PACKAGES</Typography>
         </Box>
         <Box display='flex' alignItems='center' justifyContent='center'>
           <ButtonGroup variant="text" aria-label="text button group">
@@ -100,7 +69,6 @@ const Services = () => {
         </Box>
         <Box
           border='2px solid black'
-          borderRadius='8px'
           margin='20px 30px'
           display='flex'
           flexDirection={{ xs: 'column', sm: 'row' }}
@@ -114,23 +82,27 @@ const Services = () => {
             paddingLeft='5%'
             margin='15px auto'
           >
-            <Box width='50%' borderBottom='2px solid grey' marginBottom='10px'>
-              <Typography variant="h4">Interior</Typography>
+            <Box width='50%' borderBottom='2px solid grey' marginBottom='20px' justifyContent='center' display='flex'>
+              <Typography
+                fontFamily='Montserrat, sans-serif'
+                fontWeight='200'
+                letterSpacing='2px'
+              >
+                INTERIOR
+              </Typography>
             </Box>
             {/* Interior services checkboxes */}
-            {interiorServices.map((service, index) => (
+            {getInteriorServices().map((service, index) => (
               <div
                 key={index}
                 style={{ display: "flex", alignItems: "center", margin: "5px 0" }}
               >
-                <input
-                  type="checkbox"
-                  id={`service_${index}`}
-                  checked={selectedButton !== null && getInteriorServices().includes(service)}
-                  readOnly
+                <img
+                  src={service.icon}
+                  alt={`Checked icon for ${service.name}`}
                   style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
                 />
-                <label htmlFor={`service_${index}`}>{service}</label>
+                <span style={{ lineHeight: 2 }}>{service.name}</span>
               </div>
             ))}
           </Box>
@@ -141,21 +113,26 @@ const Services = () => {
             paddingLeft='5%'
             margin='15px auto'
           >
-            <Box width='50%' borderBottom='2px solid grey' marginBottom='10px'>
-              <Typography variant="h4">Exterior</Typography>
+            <Box width='50%' borderBottom='2px solid grey' marginBottom='20px' justifyContent='center' display='flex'>
+              <Typography
+                fontFamily='Montserrat, sans-serif'
+                fontWeight='200'
+                letterSpacing='2px'
+              >
+                EXTERIOR
+              </Typography>
             </Box>
-            {exteriorServices.map((service, index) => (
+            {getExteriorServices().map((service, index) => (
               <div
                 key={index}
                 style={{ display: "flex", alignItems: "center", margin: "5px 0" }}
               >
-                <input
-                  type="checkbox"
-                  id={`service_${index}`}
-                  checked={selectedButton !== null && getExteriorServices().includes(service)}
+                <img
+                  src={service.icon}
+                  alt={`Checked icon for ${service.name}`}
                   style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
                 />
-                <label htmlFor={`service_${index}`}>{service}</label>
+                <span style={{ lineHeight: 2 }}>{service.name}</span>
               </div>
             ))}
           </Box>
