@@ -1,14 +1,10 @@
-import { Box, Button, Typography, FormControl, InputLabel, Select, MenuItem, FormHelperText, Divider } from "@mui/material";
+import { Box, Button, Typography, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import Lottie from "lottie-react";
 import animationData from './animation_lksxakfb.json';
-import { Link as ScrollLink } from "react-scroll";
 
 const Quote = () => {
-  const [quoteDisplay, setQuoteDisplay] = useState(false);
   const [service, setService] = useState('Gold');
   const [carType, setCarType] = useState('car');
   const [packageType, setPackageType] = useState('full');
@@ -24,9 +20,7 @@ const Quote = () => {
   const handleChangeType = (event) => {
     setPackageType(event.target.value);
   };
-  const handleClick = () => {
-    setQuoteDisplay(prevQuoteDisplay => !prevQuoteDisplay);
-  }
+
   const generateQuote = () => {
     if (service === "Gold" && carType === "car" && packageType === "full") {
       setQuote("$205");
