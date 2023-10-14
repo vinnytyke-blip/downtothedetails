@@ -13,10 +13,6 @@ const testimonials = [
         name: 'KYMONIE W'
     },
     {
-        text: "Vinny is the man to go to when detailing your vehicle. I took in my 2010 Toyota Tacoma after never detailing it for the 5 years I’ve owned it. He got out all the stains in my seats over the years, made the outside of the vehicle shine like when I had first bought it. Got everything done in a timely manner, very friendly, and very affordable rates. Will be going back again, and would recommend it to anybody looking to get their car detailed in the Phoenix, Tempe, Scottsdale area!",
-        name: 'COREY VALDIVIA'
-    },
-    {
         text: "I took in my long overdue Jetta for a detail and man was I impressed. I got my car back like as if it was new from the lot. The business owner Vinny is very professional and passionate about the work that is being done. From a business aspect, quotes and prices on different options were simple and affordable for the quality of work. If y’all get the chance to stop by and use Down to the Details you should definitely do so!",
         name: 'BRANDON CARO'
     },
