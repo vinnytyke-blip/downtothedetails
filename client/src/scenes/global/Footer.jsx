@@ -12,22 +12,23 @@ const Footer = () => {
       <Box
         bgcolor="#242424"
         color="#fff"
-        padding="40px 0"
+        padding="40px 10px"
         textAlign="center"
         display='flex'
-        flexDirection={{sm: "column"}}
+        flexDirection={{ sm: "column" }}
       >
         <Box
           width={breakPoint ? "80%" : "100%"}
-          display='flex'
-          justifyContent='space-between'
-          margin='auto'
+          display={{sm: 'flex', md: 'flex'}}
+          justifyContent={{md: 'space-between', xs: 'center'}}
+          marginX={{sm: '5px', md: '15px'}}
+          alignItems='center'
         >
-          <Typography variant="h2">
-            Down To The Details L.L.C.
-          </Typography>
-          <Box display='grid' gap='10px' textAlign='left'>
-            <Typography variant="body1">
+            <Typography fontSize={{ xs: '20px', md: '28px' }} fontWeight='bold'>
+              Down To The Details L.L.C.
+            </Typography>
+          <Box display='grid' gap='10px' textAlign='left' padding='10px 10px'>
+            <Typography fontWeight='bold'>
               Contact Us
             </Typography>
             <Typography style={{ display: 'flex', alignItems: 'center' }}>
@@ -39,8 +40,8 @@ const Footer = () => {
               down2detail602@gmail.com
             </Typography>
           </Box>
-          <Box display='grid' gap='5px' textAlign='left'>
-            <Typography variant="body1">
+          <Box display='grid' gap='5px' textAlign='left' padding='10px 10px'>
+            <Typography fontWeight='bold'>
               Location
             </Typography>
             <Typography style={{ display: 'flex', alignItems: 'center' }}>
