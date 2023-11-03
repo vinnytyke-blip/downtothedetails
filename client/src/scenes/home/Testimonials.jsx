@@ -1,14 +1,15 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import { testimonials } from '../../assets';
 
 const Testimonials = () => {
+  const isNonMobile = useMediaQuery("(min-width:1000px)");
   return (
     <>
       <Box display='flex' paddingTop='50px' alignItems='center' justifyContent='center' letterSpacing='0.3em'>
         <Typography variant='h2'>TESTIMONIALS</Typography>
       </Box>
       <Box
-        display="grid"
+        display= {isNonMobile ? 'flex' : 'grid'} 
         gridTemplateColumns="repeat(auto-fill, minmax(400px, 1fr))"
         gap="16px"
         alignItems='center'

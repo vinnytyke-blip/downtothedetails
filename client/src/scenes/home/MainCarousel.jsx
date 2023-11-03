@@ -33,7 +33,7 @@ const MainCarousel = ({ apiKey }) => {
   const fetchReviews = async () => {
     console.log('Calling fetchReviews...');
     try {
-      const response = await fetch(`${BASE_URL}/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw`, {
+      const response = await fetch('http://localhost:5001/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw', {
         headers: {
           Accept: 'application/json', // Set the Accept header for JSON response
         },
@@ -97,7 +97,7 @@ const MainCarousel = ({ apiKey }) => {
               >
                 Down to the details
               </Typography>
-              {/* <Typography variant="h4" >Down to the last spec</Typography> */}
+              
               <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center'>
                 <Box marginTop='4px' marginRight='15px'>
                   <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
@@ -109,16 +109,7 @@ const MainCarousel = ({ apiKey }) => {
                     />
                   </a>
                 </Box>
-                <Box display='flex' alignItems='center'>
-                  <Typography marginRight='5px'>Reviews:</Typography>
-                  <Typography marginRight='5px'>15</Typography>
-                  <img
-                    src={satisfaction}
-                    alt="satisfaction"
-                    width='65'
-                    height='65'
-                  />
-                </Box>
+                <Typography variant="h4" >A clean vehicle, a clean image, and a clean lifestyle</Typography>
               </Box>
               <Box
                 justifyContent='center'
