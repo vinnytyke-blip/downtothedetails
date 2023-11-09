@@ -129,7 +129,7 @@ function Navbar() {
                     setToggle(!toggle)
                     setActive(link.title)
                   }}
-                  style={{ marginRight: '10px', "&:hover": { cursor: "pointer" } }}
+                  style={{ marginRight: '10px', cursor: "pointer" }}
                 >
                   <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
                     <Typography variant='h4' style={{ color: active === link.title ? '#ff9900' : 'white' }}>
