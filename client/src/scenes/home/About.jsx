@@ -3,24 +3,27 @@ import { portrait } from "../../assets";
 import { useMediaQuery } from "@mui/material";
 
 const About = () => {
-  const isNonMobile = useMediaQuery("(min-width:900px)");
+  const isNonMobile = useMediaQuery("(min-width:800px)");
   return (
     <div id='about'>
       <Box
-        display={{ xs: 'block', md: 'flex' }}
+        display={ isNonMobile ? 'flex' : 'block' }
         marginX='auto'
+        alignItems='center'
         width='100%'
         height='100%'
       >
-        {isNonMobile && (
-          <Box width='50%' maxHeight='1000px'>
-            <img
-              src={portrait}
-              alt="satisfaction"
-              style={{ maxWidth: '100%', maxHeight: '100%' }}
-            />
-          </Box>
-        )}
+        <Box 
+          width={isNonMobile ? '50%' : '100%'} 
+          maxHeight='1000px'
+          overflow='hidden'
+        >
+          <img
+            src={portrait}
+            alt="satisfaction"
+            style={{ maxWidth: '100%', maxHeight: '100%' }}
+          />
+        </Box>
         <Box width={{sm: '100%', md: '50%'}} alignItems='center' display='flex' padding={{ xs: '10px', md: '30px' }} >
           <Box>
             <Typography variant="h1" fontSize={['42px', '60px']}>More About Us</Typography>
