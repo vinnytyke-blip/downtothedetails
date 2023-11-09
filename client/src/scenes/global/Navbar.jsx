@@ -1,8 +1,10 @@
+import React, { useState } from 'react';
 import { Box, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import { menu, close, navLinks } from "../../assets";
 
 const importAll = (r) =>
   r.keys().reduce((acc, item) => {
@@ -21,6 +23,8 @@ function Navbar() {
   const breakPoint = useMediaQuery("(min-width:560px)");
   const breakPointTwo = useMediaQuery("(min-width:1090px)");
   const showTypography = breakPointTwo; // Show Typography when breakPoint is false (screen width < 600px)
+  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState('');
 
   return (
     <Box
@@ -58,35 +62,86 @@ function Navbar() {
             </Typography>
           )}
         </Box>
-        <Box
+        {!breakPoint && (<Box
           display="flex"
           zIndex="2"
         >
-          <ul style={{ listStyleType: 'none', margin: 0, padding: 0, display: "flex", flexDirection: breakPoint ? "row" : "column", }}>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
-              <ScrollLink to="services" smooth={true} duration={500} className="nav-link" offset={-100}>
-                SERVICES
-              </ScrollLink>
-            </li>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
-              <ScrollLink to="about" smooth={true} duration={500} className="nav-link">
-                ABOUT US
-              </ScrollLink>
-            </li>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
-              <ScrollLink to="quote" smooth={true} duration={500} className="nav-link">
-                QUOTE
-              </ScrollLink>
-            </li>
-            <li style={{ display: 'inline-block', marginLeft: breakPoint ? '15px' : '0', marginBottom: breakPoint ? '0' : '10px', cursor: 'pointer', }}>
-              <ScrollLink to="footer" smooth={true} duration={500} className="nav-link">
-                CONTACT
-              </ScrollLink>
-            </li>
-          </ul>
+          (<img
+            src={toggle ? close : menu}
+            alt="menu"
+            width='28px'
+            height='28px'
+            cursor="pointer"
+            onClick={() => setToggle(!toggle)}
+            zIndex='1000'
+          />
+
+          {toggle && (<Box
+            display='flex'
+            flexDirection='column'
+            paddingRight='8px'
+            position='absolute'
+            top='80px'
+            right='0px'
+            minWidth='120px'
+            backgroundColor='black'
+            alignItems='center'
+          >
+            <ul
+              style={{ listStyleType: 'none', textDecoration: 'none', justifyContent: 'end' }}
+            >
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  color={`${active === link.title ? '#ff9900' : 'white'}`}
+                  onClick={() => {
+                    setToggle(!toggle)
+                    setActive(link.title)
+                  }}
+                  style={{ marginTop: '5px' }}
+                >
+                  <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
+                    <Typography variant='h4' style={{ color: active === link.title ? '#ff9900' : 'white' }}>
+                      {link.title}
+                    </Typography>
+                  </ScrollLink>
+                </li>
+              ))};
+            </ul>
+          </Box>
+          )}
         </Box>
+        )}
+        {breakPoint && (
+        <Box
+          display='flex'
+          flexDirection='row'
+          zIndex='2'
+        >
+            <ul
+              style={{ listStyleType: 'none', textDecoration: 'none', justifyContent: 'end', display: 'flex' }}
+            >
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  color={`${active === link.title ? '#ff9900' : 'white'}`}
+                  onClick={() => {
+                    setToggle(!toggle)
+                    setActive(link.title)
+                  }}
+                  style={{ marginRight: '10px', "&:hover": { cursor: "pointer" } }}
+                >
+                  <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
+                    <Typography variant='h4' style={{ color: active === link.title ? '#ff9900' : 'white' }}>
+                      {link.title}
+                    </Typography>
+                  </ScrollLink>
+                </li>
+              ))};
+            </ul>
+        </Box>)}
       </Box>
-    </Box>
+    </Box >
   );
 }
 

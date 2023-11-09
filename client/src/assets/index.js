@@ -2,6 +2,8 @@ import instaphoto from './prophotos/instagram.png';
 import satisfaction from './prophotos/satisfaction.png';
 import portrait from './prophotos/IMG_6599.jpeg';
 import checked from './prophotos/checked.png';
+import menu from './prophotos/menu.svg';
+import close from './prophotos/close.svg';
 
 const testimonials = [
     {
@@ -17,11 +19,32 @@ const testimonials = [
         name: 'BRANDON CARO'
     },
 ];
+const navLinks = [
+    {
+        id: "services",
+        title: "Services",
+    },
+    {
+        id: "about",
+        title: "About Us",
+    },
+    {
+        id: "quote",
+        title: "Quote",
+    },
+    {
+        id: "footer",
+        title: "Contact Us"
+    }
+];
 
 export {
     instaphoto,
     satisfaction,
     portrait,
     checked,
+    menu,
+    close,
     testimonials,
+    navLinks,
 };
