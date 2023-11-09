@@ -16,7 +16,6 @@ export const heroTextureImports = importAll(
   require.context("../../assets/logo", false, /\.(png|PNG|jpe?g|svg)$/)
 );
 
-const logo = heroTextureImports["IMG_5789.PNG"]
 
 function Navbar() {
   const navigate = useNavigate();
@@ -25,6 +24,7 @@ function Navbar() {
   const showTypography = breakPointTwo; // Show Typography when breakPoint is false (screen width < 600px)
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('');
+  const logo = heroTextureImports["IMG_5789.PNG"]
 
   return (
     <Box
@@ -113,11 +113,11 @@ function Navbar() {
         </Box>
         )}
         {breakPoint && (
-        <Box
-          display='flex'
-          flexDirection='row'
-          zIndex='2'
-        >
+          <Box
+            display='flex'
+            flexDirection='row'
+            zIndex='2'
+          >
             <ul
               style={{ listStyleType: 'none', textDecoration: 'none', justifyContent: 'end', display: 'flex' }}
             >
@@ -139,7 +139,7 @@ function Navbar() {
                 </li>
               ))};
             </ul>
-        </Box>)}
+          </Box>)}
       </Box>
     </Box >
   );

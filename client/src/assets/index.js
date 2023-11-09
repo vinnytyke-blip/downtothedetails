@@ -34,7 +34,7 @@ const navLinks = [
     },
     {
         id: "footer",
-        title: "Contact Us"
+        title: "Contact"
     }
 ];
 
