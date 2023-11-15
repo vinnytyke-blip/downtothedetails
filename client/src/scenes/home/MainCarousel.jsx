@@ -4,7 +4,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { instaphoto } from '../../assets';
-import { satisfaction } from "../../assets";
 import React, { useEffect, useState } from 'react';
 
 
@@ -19,35 +18,8 @@ export const heroTextureImports = importAll(
   require.context('../../assets/herophotos', false, /\.(png|jpe?g|svg|)$/)
 );
 
-const MainCarousel = ({ apiKey }) => {
+const MainCarousel = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
-  const MAIL_URL = process.env.REACT_APP_MAIL_URL;
-  const [reviews, setReviews] = useState([]);
-
-  const BASE_URL = 'http://localhost:5001'
-
-  useEffect(() => {
-    fetchReviews();
-  }, [apiKey]);
-
-  const fetchReviews = async () => {
-    console.log('Calling fetchReviews...');
-    try {
-      const response = await fetch('http://localhost:5001/api/reviews?apiKey=AIzaSyBg8kkM413J-HbQpUUm0PM0FQ1hHk1jJNw', {
-        headers: {
-          Accept: 'application/json', // Set the Accept header for JSON response
-        },
-      });
-      const data = await response.json();
-
-      console.log('Response from server:', data);
-
-      setReviews(data);
-    } catch (error) {
-      console.error('Error fetching reviews:', error);
-    }
-  };
-  console.log("reviews count", reviews.length)
 
   return (
     <div id="top">
@@ -74,16 +46,6 @@ const MainCarousel = ({ apiKey }) => {
             justifyContent='center'
             zIndex='5'
           >
-            {/* <MailchimpSubscribe
-              url={MAIL_URL}
-              render={({ subscribe, status, message }) => (
-                <SubsribeForm
-                status={status}
-                message={message}
-                onValidated={(formData) => subscribe(formData)}
-                />
-                )}
-              /> */}
             <Box
               columnGap='20px'
               padding='10px'
@@ -206,6 +168,7 @@ const MainCarousel = ({ apiKey }) => {
                   <img
                     src={texture}
                     alt={`carousel-${index}`}
+                    loading="lazy"
                     style={{
                       width: "100%",
                       height: "100%", // Set the image height to 100% to fill the parent Box
@@ -218,31 +181,6 @@ const MainCarousel = ({ apiKey }) => {
             </Carousel>
           </Box>
         )}
-
-        {/* <Box
-          zIndex='2'
-          position="absolute"
-          top="23%"
-          textAlign="center"
-          padding="20px"
-          width="400px"
-          left={isNonMobile ? "10%" : "0"}
-          right={isNonMobile ? undefined : "0"}
-          margin={isNonMobile ? undefined : "0 auto"}
-          maxWidth={isNonMobile ? undefined : "300px"}
-          >
-          <MailchimpSubscribe
-          url={MAIL_URL}
-          render={({ subscribe, status, message }) => (
-            <SubsribeForm
-            status={status}
-            message={message}
-            onValidated={(formData) => subscribe(formData)}
-            />
-            )}
-            />
-            
-          </Box> */}
       </Box>
     </div>
   );

@@ -2,7 +2,7 @@ import { Box, Button, Typography, FormControl, InputLabel, Select, MenuItem } fr
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Lottie from "lottie-react";
-import animationData from './animation_lksxakfb.json';
+import { animationData } from "../../assets";
 
 const Quote = () => {
   const [service, setService] = useState('Gold');

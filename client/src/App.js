@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
 import { Box } from "@mui/material";
-import Home from './scenes/home/Home';
 import MainCarousel from "./scenes/home/MainCarousel";
 import Testimonials from "./scenes/home/Testimonials";
 import Services from "./scenes/home/Services";
@@ -28,11 +27,8 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <ScrollToTop />
-        {/* <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes> */}
         <Box position='fixed' zIndex='1'>
-        <MainCarousel apiKey={apiKey} />
+        <MainCarousel />
       </Box>
       <Box position="relative" marginTop='100vh' zIndex={2} bgcolor='white'>
         <Testimonials />

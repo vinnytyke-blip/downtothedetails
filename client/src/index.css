@@ -39,3 +39,12 @@ body {
   visibility: visible; /* Make the underline visible on hover */
   transform: scaleX(1); /* Scale the underline to full width on hover */
 }
+
+.quote-box {
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.show {
+  height: 400px;
+}

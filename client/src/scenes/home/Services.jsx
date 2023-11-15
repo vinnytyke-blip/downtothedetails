@@ -1,10 +1,7 @@
 import { Box, Typography, Button, ButtonGroup } from "@mui/material";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import {
-  interiorServices,
-  exteriorServices
-} from './allServices';
+import { interiorServices, exteriorServices } from "../../assets";
 
 
 const Services = () => {
