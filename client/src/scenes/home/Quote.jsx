@@ -2,7 +2,7 @@ import { Box, Button, Typography, FormControl, InputLabel, Select, MenuItem } fr
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Lottie from "lottie-react";
-import { animationData } from "../../assets";
+import { animationData, quoteConfig } from "../../assets";
 
 const Quote = () => {
   const [service, setService] = useState('Gold');
@@ -22,42 +22,9 @@ const Quote = () => {
   };
 
   const generateQuote = () => {
-    if (service === "Gold" && carType === "car" && packageType === "full") {
-      setQuote("$205");
-    } else if (service === "Silver" && carType === "car" && packageType === "full") {
-      setQuote("$190");
-    } else if (service === "Bronze" && carType === "car" && packageType === "full") {
-      setQuote("$175");
-    } else if (service === "Gold" && carType === "suv" && packageType === "full") {
-      setQuote("$220");
-    } else if (service === "Silver" && carType === "suv" && packageType === "full") {
-      setQuote("$205");
-    } else if (service === "Bronze" && carType === "suv" && packageType === "full") {
-      setQuote("$190");
-    } else if (service === "Gold" && carType === "truck" && packageType === "full") {
-      setQuote("$235");
-    } else if (service === "Silver" && carType === "truck" && packageType === "full") {
-      setQuote("$220");
-    } else if (service === "Bronze" && carType === "truck" && packageType === "full") {
-      setQuote("$205");
-    } else if (service === "Gold" && carType === "car" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$149.99");
-    } else if (service === "Silver" && carType === "car" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$139.99");
-    } else if (service === "Bronze" && carType === "car" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$129.99");
-    } else if (service === "Gold" && carType === "suv" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$159.99");
-    } else if (service === "Silver" && carType === "suv" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$149.99");
-    } else if (service === "Bronze" && carType === "suv" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$139.99");
-    } else if (service === "Gold" && carType === "truck" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$169.99");
-    } else if (service === "Silver" && carType === "truck" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$159.99");
-    } else if (service === "Bronze" && carType === "truck" && (packageType === "interior" || packageType === "exterior")) {
-      setQuote("$149.99");
+    const selectedQuote = quoteConfig[service]?.[carType]?.[packageType];
+    if (selectedQuote) {
+      setQuote(selectedQuote);
     } else {
       setQuote("Please select valid options to get a quote.");
     }

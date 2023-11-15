@@ -105,6 +105,60 @@ const exteriorServices = {
     ],
 };
 
+const quoteConfig = {
+    Gold: {
+        car: {
+            full: "$205",
+            interior: "$149.99",
+            exterior: "$149.99",
+        },
+        suv: {
+            full: "$220",
+            interior: "$159.99",
+            exterior: "$159.99",
+        },
+        truck: {
+            full: "$235",
+            interior: "$169.99",
+            exterior: "$169.99",
+        },
+    },
+    Silver: {
+        car: {
+            full: "$190",
+            interior: "$139.99",
+            exterior: "$139.99",
+        },
+        suv: {
+            full: "$205",
+            interior: "$149.99",
+            exterior: "$149.99",
+        },
+        truck: {
+            full: "$220",
+            interior: "$159.99",
+            exterior: "$159.99",
+        },
+    },
+    Bronze: {
+        car: {
+            full: "$175",
+            interior: "$129.99",
+            exterior: "$129.99",
+        },
+        suv: {
+            full: "$190",
+            interior: "$139.99",
+            exterior: "$139.99",
+        },
+        truck: {
+            full: "$205",
+            interior: "$149.99",
+            exterior: "$149.99",
+        },
+    },
+};
+
 export {
     instaphoto,
     satisfaction,
@@ -116,5 +170,6 @@ export {
     testimonials,
     navLinks,
     interiorServices,
-    exteriorServices
+    exteriorServices,
+    quoteConfig,
 };
