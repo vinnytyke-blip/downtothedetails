@@ -59,7 +59,7 @@ const MainCarousel = () => {
               >
                 Down to the details
               </Typography>
-              
+
               <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center'>
                 <Box marginTop='4px' marginRight='15px'>
                   <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
@@ -83,7 +83,7 @@ const MainCarousel = () => {
                   rel="noopener noreferrer"
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
-                  <Button variant="outlined" sx={{ letterSpacing: '4px', borderRadius: '0', width: { sm: '100%', md: '500px' }, height: '50px' }}>
+                  <Button variant="outlined" sx={{ borderRadius: '0', width: { sm: '100%', md: '500px' }, height: '50px' }}>
                     SCHEDULE AN APPOINTMENT
                   </Button>
                 </a>

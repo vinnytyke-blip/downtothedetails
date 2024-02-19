@@ -106,7 +106,8 @@ export const theme = createTheme({
           letterSpacing: '4px',
           borderRadius: '0',
           width: { sm: '80%', md: '500px' },
-          height: '50px'
+          height: '50px',
+          boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.5)',
         },
         filled: {
           letterSpacing: '4px',
