@@ -108,53 +108,53 @@ const exteriorServices = {
 const quoteConfig = {
     Gold: {
         car: {
-            full: "$205",
-            interior: "$149.99",
-            exterior: "$149.99",
+            full: "$225",
+            interior: "$175",
+            exterior: "$175",
         },
         suv: {
-            full: "$220",
-            interior: "$159.99",
-            exterior: "$159.99",
+            full: "$242",
+            interior: "$175",
+            exterior: "$175",
         },
         truck: {
-            full: "$235",
+            full: "$259",
             interior: "$169.99",
             exterior: "$169.99",
         },
     },
     Silver: {
         car: {
-            full: "$190",
-            interior: "$139.99",
-            exterior: "$139.99",
+            full: "$210",
+            interior: "$150",
+            exterior: "$150",
         },
         suv: {
-            full: "$205",
-            interior: "$149.99",
-            exterior: "$149.99",
+            full: "$225",
+            interior: "$175",
+            exterior: "$175",
         },
         truck: {
-            full: "$220",
-            interior: "$159.99",
-            exterior: "$159.99",
+            full: "$242",
+            interior: "$175",
+            exterior: "$175",
         },
     },
     Bronze: {
         car: {
             full: "$175",
-            interior: "$129.99",
-            exterior: "$129.99",
+            interior: "$145",
+            exterior: "$145",
         },
         suv: {
-            full: "$190",
-            interior: "$139.99",
-            exterior: "$139.99",
+            full: "$210",
+            interior: "$150",
+            exterior: "$150",
         },
         truck: {
-            full: "$205",
-            interior: "$149.99",
-            exterior: "$149.99",
+            full: "$225",
+            interior: "$175",
+            exterior: "$175",
         },
     },
 };

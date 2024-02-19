@@ -129,16 +129,16 @@ const Quote = () => {
             alignItems='center'
             width='300px'
           >
-              <Typography display='flex' alignItems='center' margin='auto' fontSize={['70px', '80px']} >
-                {quote}
-              </Typography>
+            <Typography display='flex' alignItems='center' margin='auto' fontSize={['70px', '80px']} >
+              {quote}
+            </Typography>
             <Box
               margin='auto 10px'
               display='flex'
               flexDirection='column'
               alignItems='center'
             >
-              {(quote === "$205" || quote === "$129.99") && (
+              {(quote === "$225" || quote === "$145") && (
                 <>
                   <Box display='flex' width='50px' height='50px' alignItems='center' justifyContent='center'>
                     <Lottie animationData={animationData} />
