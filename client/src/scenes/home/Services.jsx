@@ -76,7 +76,6 @@ const Services = () => {
                     alignItems: "center",
                     margin: "5px 0",
                     fontWeight: isHighlighted ? "bold" : "normal", // Apply bold styling if service exists in selected category
-                    fontSize: isHighlighted ? "18px" : "16px"
                   }}
                 >
                   <img
