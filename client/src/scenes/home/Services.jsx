@@ -2,6 +2,7 @@ import { Box, Typography, Button, ButtonGroup } from "@mui/material";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { interiorServices, exteriorServices, interiorServicesTwo, exteriorServicesTwo } from "../../assets";
+import { checked, greenCheck } from "../../assets";
 
 
 const Services = () => {
@@ -79,9 +80,9 @@ const Services = () => {
                   }}
                 >
                   <img
-                    src={service.icon}
+                    src={isHighlighted ? greenCheck : checked}
                     alt={`Checked icon for ${service.name}`}
-                    style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
+                    style={{ flexShrink: 0, marginRight: '5px', width: isHighlighted ? '17px' : '15px', height: isHighlighted ? '17px' : '15px' }}
                   />
                   <span style={{ lineHeight: 2 }}>{service.name}</span>
                 </div>
@@ -118,9 +119,9 @@ const Services = () => {
                   }}
                 >
                   <img
-                    src={service.icon}
+                    src={isHighlighted ? greenCheck : checked}
                     alt={`Checked icon for ${service.name}`}
-                    style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
+                    style={{ flexShrink: 0, marginRight: '5px', width: isHighlighted ? '17px' : '15px', height: isHighlighted ? '17px' : '15px' }}
                   />
                   <span style={{ lineHeight: 2 }}>{service.name}</span>
                 </div>

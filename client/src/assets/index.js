@@ -2,6 +2,7 @@ import instaphoto from './prophotos/instagram.png';
 import satisfaction from './prophotos/satisfaction.png';
 import portrait from './prophotos/IMG_6599.jpeg';
 import checked from './prophotos/checked.png';
+import greenCheck from './prophotos/greenchecked.png';
 import menu from './prophotos/menu.svg';
 import close from './prophotos/close.svg';
 import animationData from './animation_lksxakfb.json';
@@ -53,6 +54,7 @@ const interiorServices = {
         { icon: checked, name: 'Door Panels/Jams Cleaning' },
         { icon: checked, name: 'All Stains Removed to the Best of Their Ability' },
         { icon: checked, name: 'Steam Cleaning' },
+        { icon: checked, name: 'Steam Cleaning (if necessary)' },
     ],
     silver: [
         { icon: checked, name: 'Interior Vacuum' },
@@ -80,57 +82,58 @@ const interiorServices = {
 
 const exteriorServices = {
     gold: [
-        { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
-        { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
-        { icon: checked, name: 'Windows Cleaned' },
-        { icon: checked, name: 'Bug Removal' },
-        { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
-        { icon: checked, name: 'Tire Shine Applied' },
-        { icon: checked, name: 'Clay Bar Treatment' },
+        { name: 'Foam Cannon Hand Wash/Dry' },
+        { name: 'Tires and Rims Cleaned/Polished' },
+        { name: 'Windows Cleaned' },
+        { name: 'Bug Removal' },
+        { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+        { name: 'Tire Shine Applied' },
+        { name: 'Clay Bar Treatment' },
+        { name: 'Clay Bar Treatment (if necessary)' },
     ],
     silver: [
-        { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
-        { icon: checked, name: 'Clay Bar Treatment (if necessary)' },
-        { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
-        { icon: checked, name: 'Windows Cleaned' },
-        { icon: checked, name: 'Bug Removal' },
-        { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+        { name: 'Foam Cannon Hand Wash/Dry' },
+        { name: 'Clay Bar Treatment (if necessary)' },
+        { name: 'Tires and Rims Cleaned/Polished' },
+        { name: 'Windows Cleaned' },
+        { name: 'Bug Removal' },
+        { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
     ],
     bronze: [
-        { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
-        { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
-        { icon: checked, name: 'Windows Cleaned' },
-        { icon: checked, name: 'Bug Removal' },
-        { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+        { name: 'Foam Cannon Hand Wash/Dry' },
+        { name: 'Tires and Rims Cleaned/Polished' },
+        { name: 'Windows Cleaned' },
+        { name: 'Bug Removal' },
+        { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
     ],
 };
 
 const interiorServicesTwo = [
-    { icon: checked, name: 'Interior Vacuum' },
-    { icon: checked, name: 'Seats Vacuumed/Shampooed/ Cleaned/Disinfected' },
-    { icon: checked, name: 'Carpets Cleaned/Spot Treatment' },
-    { icon: checked, name: 'Full Interior Dust/Wipe Down/Disinfect' },
-    { icon: checked, name: 'In-Depth Detail of the Center Console' },
-    { icon: checked, name: 'Windows Cleaning' },
-    { icon: checked, name: 'Door Panels/Jams Cleaning' },
-    { icon: checked, name: 'AC Vents Cleaning' },
-    { icon: checked, name: 'Dashboard Cleaning' },
-    { icon: checked, name: 'Floor Mats Extracted Cleaned/Shampooed' },
-    { icon: checked, name: 'All Stains Removed to the Best of Their Ability' },
-    { icon: checked, name: 'Steam Cleaning' }, // Repeated in silver
-    { icon: checked, name: 'Steam Cleaning (if necessary)' }, // Repeated in silver
+    { name: 'Interior Vacuum' },
+    { name: 'Seats Vacuumed/Shampooed/ Cleaned/Disinfected' },
+    { name: 'Carpets Cleaned/Spot Treatment' },
+    { name: 'Full Interior Dust/Wipe Down/Disinfect' },
+    { name: 'In-Depth Detail of the Center Console' },
+    { name: 'Windows Cleaning' },
+    { name: 'Door Panels/Jams Cleaning' },
+    { name: 'AC Vents Cleaning' },
+    { name: 'Dashboard Cleaning' },
+    { name: 'Floor Mats Extracted Cleaned/Shampooed' },
+    { name: 'Steam Cleaning (if necessary)' },
+    { name: 'Steam Cleaning' },
+    { name: 'All Stains Removed to the Best of Their Ability' }, // Repeated in silver // Repeated in silver
     // Any other repeated services from silver or bronze can be added here as well
 ];
 
 const exteriorServicesTwo = [
-    { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
-    { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
-    { icon: checked, name: 'Windows Cleaned' },
-    { icon: checked, name: 'Bug Removal' },
-    { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
-    { icon: checked, name: 'Tire Shine Applied' },
-    { icon: checked, name: 'Clay Bar Treatment' },
-    { icon: checked, name: 'Clay Bar Treatment (if necessary)' }, // Repeated in silver
+    { name: 'Foam Cannon Hand Wash/Dry' },
+    { name: 'Tires and Rims Cleaned/Polished' },
+    { name: 'Windows Cleaned' },
+    { name: 'Bug Removal' },
+    { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+    { name: 'Clay Bar Treatment (if necessary)' },
+    { name: 'Clay Bar Treatment' },
+    { name: 'Tire Shine Applied' },// Repeated in silver
 ];
 
 // Now you can handle interiorServices and exteriorServices as arrays without the categorization.
@@ -195,6 +198,7 @@ export {
     satisfaction,
     portrait,
     checked,
+    greenCheck,
     menu,
     close,
     animationData,
