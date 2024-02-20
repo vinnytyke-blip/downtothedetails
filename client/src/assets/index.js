@@ -105,6 +105,37 @@ const exteriorServices = {
     ],
 };
 
+const interiorServicesTwo = [
+    { icon: checked, name: 'Interior Vacuum' },
+    { icon: checked, name: 'Seats Vacuumed/Shampooed/ Cleaned/Disinfected' },
+    { icon: checked, name: 'Carpets Cleaned/Spot Treatment' },
+    { icon: checked, name: 'Full Interior Dust/Wipe Down/Disinfect' },
+    { icon: checked, name: 'In-Depth Detail of the Center Console' },
+    { icon: checked, name: 'Windows Cleaning' },
+    { icon: checked, name: 'Door Panels/Jams Cleaning' },
+    { icon: checked, name: 'AC Vents Cleaning' },
+    { icon: checked, name: 'Dashboard Cleaning' },
+    { icon: checked, name: 'Floor Mats Extracted Cleaned/Shampooed' },
+    { icon: checked, name: 'All Stains Removed to the Best of Their Ability' },
+    { icon: checked, name: 'Steam Cleaning' }, // Repeated in silver
+    { icon: checked, name: 'Steam Cleaning (if necessary)' }, // Repeated in silver
+    // Any other repeated services from silver or bronze can be added here as well
+];
+
+const exteriorServicesTwo = [
+    { icon: checked, name: 'Foam Cannon Hand Wash/Dry' },
+    { icon: checked, name: 'Tires and Rims Cleaned/Polished' },
+    { icon: checked, name: 'Windows Cleaned' },
+    { icon: checked, name: 'Bug Removal' },
+    { icon: checked, name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
+    { icon: checked, name: 'Tire Shine Applied' },
+    { icon: checked, name: 'Clay Bar Treatment' },
+    { icon: checked, name: 'Clay Bar Treatment (if necessary)' }, // Repeated in silver
+];
+
+// Now you can handle interiorServices and exteriorServices as arrays without the categorization.
+
+
 const quoteConfig = {
     Gold: {
         car: {
@@ -171,5 +202,7 @@ export {
     navLinks,
     interiorServices,
     exteriorServices,
+    interiorServicesTwo,
+    exteriorServicesTwo,
     quoteConfig,
 };

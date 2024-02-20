@@ -1,7 +1,7 @@
 import { Box, Typography, Button, ButtonGroup } from "@mui/material";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { interiorServices, exteriorServices } from "../../assets";
+import { interiorServices, exteriorServices, interiorServicesTwo, exteriorServicesTwo } from "../../assets";
 
 
 const Services = () => {
@@ -16,31 +16,6 @@ const Services = () => {
   const normalSize = '16px';
   const selectedSize = '20px';
 
-
-  const getInteriorServices = () => {
-    switch (selectedButton) {
-      case "Gold":
-        return interiorServices.gold;
-      case "Silver":
-        return interiorServices.silver;
-      case "Bronze":
-        return interiorServices.bronze;
-      default:
-        return [];
-    }
-  };
-  const getExteriorServices = () => {
-    switch (selectedButton) {
-      case "Gold":
-        return exteriorServices.gold;
-      case "Silver":
-        return exteriorServices.silver;
-      case "Bronze":
-        return exteriorServices.bronze;
-      default:
-        return [];
-    }
-  };
 
   return (
     <div id='services'>
@@ -89,19 +64,29 @@ const Services = () => {
               </Typography>
             </Box>
             {/* Interior services checkboxes */}
-            {getInteriorServices().map((service, index) => (
-              <div
-                key={index}
-                style={{ display: "flex", alignItems: "center", margin: "5px 0" }}
-              >
-                <img
-                  src={service.icon}
-                  alt={`Checked icon for ${service.name}`}
-                  style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
-                />
-                <span style={{ lineHeight: 2 }}>{service.name}</span>
-              </div>
-            ))}
+            {interiorServicesTwo.map((service, index) => {
+              const categoryServices = interiorServices[selectedButton.toLowerCase()]; // Get services based on selected category
+              const isHighlighted = categoryServices.some(categoryService => categoryService.name === service.name); // Check if service exists in selected category
+              return (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    margin: "5px 0",
+                    fontWeight: isHighlighted ? "bold" : "normal", // Apply bold styling if service exists in selected category
+                    fontSize: isHighlighted ? "18px" : "16px"
+                  }}
+                >
+                  <img
+                    src={service.icon}
+                    alt={`Checked icon for ${service.name}`}
+                    style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
+                  />
+                  <span style={{ lineHeight: 2 }}>{service.name}</span>
+                </div>
+              );
+            })}
           </Box>
           <Box
             display='flex'
@@ -119,20 +104,34 @@ const Services = () => {
                 EXTERIOR
               </Typography>
             </Box>
-            {getExteriorServices().map((service, index) => (
-              <div
-                key={index}
-                style={{ display: "flex", alignItems: "center", margin: "5px 0" }}
-              >
-                <img
-                  src={service.icon}
-                  alt={`Checked icon for ${service.name}`}
-                  style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
-                />
-                <span style={{ lineHeight: 2 }}>{service.name}</span>
-              </div>
-            ))}
+            {exteriorServicesTwo.map((service, index) => {
+              const categoryServices = exteriorServices[selectedButton.toLowerCase()]; // Get services based on selected category
+              const isHighlighted = categoryServices.some(categoryService => categoryService.name === service.name); // Check if service exists in selected category
+              return (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    margin: "5px 0",
+                    fontWeight: isHighlighted ? "bold" : "normal" // Apply bold styling if service exists in selected category
+                  }}
+                >
+                  <img
+                    src={service.icon}
+                    alt={`Checked icon for ${service.name}`}
+                    style={{ flexShrink: 0, marginRight: '5px', width: '15px', height: '15px' }}
+                  />
+                  <span style={{ lineHeight: 2 }}>{service.name}</span>
+                </div>
+              );
+            })}
           </Box>
+        </Box>
+        <Box display='flex' justifyContent='center'>
+          <Typography fontStyle='italic'>
+            Disclaimer: excessive dog hair will be an up charge of $75
+          </Typography>
         </Box>
         <Box
           display='flex'
