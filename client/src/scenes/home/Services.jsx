@@ -75,7 +75,8 @@ const Services = () => {
                     display: "flex",
                     alignItems: "center",
                     margin: "5px 0",
-                    fontWeight: isHighlighted ? "bold" : "normal", // Apply bold styling if service exists in selected category
+                    fontWeight: isHighlighted ? "bold" : "normal",
+                    fontSize: isHighlighted ? "18px" : "16px", // Apply bold styling if service exists in selected category
                   }}
                 >
                   <img
@@ -114,7 +115,8 @@ const Services = () => {
                     display: "flex",
                     alignItems: "center",
                     margin: "5px 0",
-                    fontWeight: isHighlighted ? "bold" : "normal" // Apply bold styling if service exists in selected category
+                    fontWeight: isHighlighted ? "bold" : "normal",
+                    fontSize: isHighlighted ? "18px" : "16px", // Apply bold styling if service exists in selected category
                   }}
                 >
                   <img
