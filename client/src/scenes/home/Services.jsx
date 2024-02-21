@@ -137,7 +137,7 @@ const Services = () => {
           alignItems='center'
         >
           <Typography fontStyle='italic' style={{ marginBottom: '10px' }}>
-            Disclaimer: <span style={{ fontWeight: 'bolder', fontSize: '17px' }}>excessive dog hair
+            Disclaimer: <span style={{ fontWeight: 'bolder', fontSize: '17px' }}> Dog Hair
             </span> will be an up charge of <span style={{ fontWeight: 'bolder', fontSize: '17px' }}>$75</span>
           </Typography>
           <Typography fontStyle='italic'>

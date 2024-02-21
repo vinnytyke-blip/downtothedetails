@@ -31,26 +31,14 @@ function App() {
           <MainCarousel />
         </Box>
         <Box position="relative" marginTop='100vh' zIndex={2} bgcolor='white'>
-          {window.innerWidth <= 600 ? (
-            <>
-              <Services />
-              <Quote />
-              <About />
-              <Testimonials />
-              <Footer />
-            </>
-          ) : (
-            <>
-              <Testimonials />
-              <Services />
-              <Quote />
-              <About />
-              <Footer />
-            </>
-          )}
+          <Services />
+          <Quote />
+          <About />
+          <Testimonials />
+          <Footer />
         </Box>
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 
