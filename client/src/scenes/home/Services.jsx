@@ -130,16 +130,25 @@ const Services = () => {
             })}
           </Box>
         </Box>
-        <Box display='flex' justifyContent='center'>
+        <Box
+          display='flex'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'
+        >
+          <Typography fontStyle='italic' style={{ marginBottom: '10px' }}>
+            Disclaimer: <span style={{ fontWeight: 'bolder', fontSize: '17px' }}>excessive dog hair
+            </span> will be an up charge of <span style={{ fontWeight: 'bolder', fontSize: '17px' }}>$75</span>
+          </Typography>
           <Typography fontStyle='italic'>
-            Disclaimer: excessive dog hair will be an up charge of $75
+            Add <span style={{ fontWeight: 'bolder', fontSize: '17px' }}>Engine Detail</span> for <span style={{ fontWeight: 'bolder', fontSize: '17px' }}>$95</span> per Engine
           </Typography>
         </Box>
         <Box
           display='flex'
           alignItems='center'
           justifyContent='center'
-          margin='30px auto'
+          margin='20px auto'
         >
           <a
             href="https://calendly.com/down2the_detail/estimate?month=2023-07"

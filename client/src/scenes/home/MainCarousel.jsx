@@ -57,7 +57,7 @@ const MainCarousel = () => {
                 variant="h1"
                 fontSize={['42px', '60px']}
               >
-                Down to the details
+                Down to the Details
               </Typography>
 
               <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center'>
