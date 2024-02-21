@@ -62,7 +62,7 @@ const MainCarousel = () => {
                 Down to the Details
               </Typography>
 
-              <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
+              <Box marginTop='5px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
                 <Box marginTop='4px' marginRight='15px'>
                   <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
                     <img
