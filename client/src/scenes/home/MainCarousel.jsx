@@ -47,11 +47,13 @@ const MainCarousel = () => {
             zIndex='5'
           >
             <Box
+              display='flex'
+              flexDirection='column'
               columnGap='20px'
               padding='10px'
               margin={{ sm: 'auto' }}
               justifyContent='center'
-
+              alignItems='center'
             >
               <Typography
                 variant="h1"
@@ -60,7 +62,7 @@ const MainCarousel = () => {
                 Down to the Details
               </Typography>
 
-              <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center'>
+              <Box marginTop='px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
                 <Box marginTop='4px' marginRight='15px'>
                   <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
                     <img
@@ -71,7 +73,7 @@ const MainCarousel = () => {
                     />
                   </a>
                 </Box>
-                <Typography variant="h4" >A clean vehicle, a clean image, and a clean lifestyle</Typography>
+                <Typography variant="h8" >A clean vehicle, a clean image, and a clean lifestyle</Typography>
               </Box>
               <Box
                 justifyContent='center'

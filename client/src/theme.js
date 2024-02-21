@@ -71,6 +71,10 @@ export const theme = createTheme({
       fontSize: 70,
       fontWeight: "bold",
     },
+    h8: {
+      fontFamily: ["Noto Sana", "sans-serif"].join(","),
+      fontSize: 16,
+    }
   },
 
   components: {
@@ -107,7 +111,7 @@ export const theme = createTheme({
           borderRadius: '0',
           width: { sm: '80%', md: '500px' },
           height: '50px',
-          boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.8)',
+          boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)',
         },
         filled: {
           letterSpacing: '4px',
