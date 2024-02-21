@@ -83,7 +83,7 @@ const MainCarousel = () => {
                   rel="noopener noreferrer"
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
-                  <Button variant="outlined" sx={{ borderRadius: '0', width: { sm: '100%', md: '500px' }, height: '50px' }}>
+                  <Button variant="outlined" sx={{ borderRadius: '0', width: { sm: '100%', md: '500px' }, height: '50px', fontWeight: 'bolder' }}>
                     SCHEDULE AN APPOINTMENT
                   </Button>
                 </a>
