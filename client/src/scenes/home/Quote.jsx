@@ -11,6 +11,8 @@ const Quote = () => {
   const [quote, setQuote] = useState('$0');
   const breakPoint = useMediaQuery('(min-width:1000px)');
 
+  const bestSellers = ["$205", "$220", "$235", "$190", "$175"]
+
   const handleChange = (event) => {
     setService(event.target.value);
   };
@@ -138,7 +140,7 @@ const Quote = () => {
               flexDirection='column'
               alignItems='center'
             >
-              {(quote === "$225" || quote === "$145") && (
+              {(bestSellers.includes(quote)) && (
                 <>
                   <Box display='flex' width='50px' height='50px' alignItems='center' justifyContent='center'>
                     <Lottie animationData={animationData} />
