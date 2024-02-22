@@ -152,7 +152,7 @@ const Services = () => {
             rel="noopener noreferrer"
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
-            <Button variant="outlined">SCHEDULE AN APPOINTMENT</Button>
+            <Button variant="outlined" sx={{ fontWeight: 'bolder' }}>SCHEDULE AN APPOINTMENT</Button>
           </a>
         </Box>
       </Box>

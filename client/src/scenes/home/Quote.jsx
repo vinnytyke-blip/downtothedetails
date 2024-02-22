@@ -8,10 +8,11 @@ const Quote = () => {
   const [service, setService] = useState('Gold');
   const [carType, setCarType] = useState('car');
   const [packageType, setPackageType] = useState('full');
-  const [quote, setQuote] = useState('$0');
+  const [quote, setQuote] = useState(0);
+  const [plusEngine, setPlusEngine] = useState('ADD ENGINE DETAIL')
   const breakPoint = useMediaQuery('(min-width:1000px)');
 
-  const bestSellers = ["$205", "$220", "$235", "$190", "$175"]
+  const bestSellers = [205, 220, 235, 190, 175, 300, 315, 330, 285, 270]
 
   const handleChange = (event) => {
     setService(event.target.value);
@@ -32,6 +33,12 @@ const Quote = () => {
     }
   };
 
+  const addEngine = () => {
+    setQuote(prevQuote => prevQuote + (plusEngine === 'ADD ENGINE DETAIL' ? 95 : -95));
+    setPlusEngine(prevPlusEngine => prevPlusEngine === 'ADD ENGINE DETAIL' ? 'ENGINE DETAIL ADDED!' : 'ADD ENGINE DETAIL');
+  }
+
+
   return (
     <div id="quote">
 
@@ -50,8 +57,8 @@ const Quote = () => {
           justifyContent='space-between'
           margin='50px auto'
         >
-          <Box display='flex' flexDirection='column' gap='10px' width='300px'>
-            <FormControl sx={{ minWidth: 270 }}>
+          <Box display='flex' flexDirection='column' gap='20px' width='300px'>
+            <FormControl sx={{ minWidth: 270, boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)', borderRadius: '8px' }}>
               <InputLabel id="demo-simple-select-helper-label">Service</InputLabel>
               <Select
                 labelId="demo-simple-select-helper-label"
@@ -69,7 +76,7 @@ const Quote = () => {
               </Select>
             </FormControl>
 
-            <FormControl sx={{ minWidth: 270 }}>
+            <FormControl sx={{ minWidth: 270, boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)', borderRadius: '8px' }}>
               <InputLabel id="demo-simple-select-helper-label">Car Type</InputLabel>
               <Select
                 labelId="demo-simple-select-helper-label"
@@ -87,7 +94,7 @@ const Quote = () => {
               </Select>
             </FormControl>
 
-            <FormControl sx={{ minWidth: 270 }}>
+            <FormControl sx={{ minWidth: 270, boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)', borderRadius: '8px' }}>
               <InputLabel id="demo-simple-select-helper-label">Interior/Exterior</InputLabel>
               <Select
                 labelId="demo-simple-select-helper-label"
@@ -116,6 +123,18 @@ const Quote = () => {
                 GET Quote
               </Typography>
             </Button>
+
+            <Button
+              variant="filled"
+              style={{
+                backgroundColor: 'black',
+              }}
+              onClick={addEngine}
+            >
+              <Typography color='white'>
+                {plusEngine}
+              </Typography>
+            </Button>
           </Box>
 
           <Box
@@ -132,7 +151,7 @@ const Quote = () => {
             width='300px'
           >
             <Typography display='flex' alignItems='center' margin='auto' fontSize={['70px', '80px']} >
-              {quote}
+              ${quote}
             </Typography>
             <Box
               margin='auto 10px'
