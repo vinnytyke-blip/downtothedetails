@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
@@ -62,85 +62,99 @@ function Navbar() {
             </Typography>
           )}
         </Box>
-        {!breakPoint && (<Box
-          display="flex"
-          zIndex="2"
-        >
-          (<img
-            src={toggle ? close : menu}
-            alt="menu"
-            width='28px'
-            height='28px'
-            cursor="pointer"
-            onClick={() => setToggle(!toggle)}
-            zIndex='1000'
-          />
-
-          {toggle && (<Box
-            display='flex'
-            flexDirection='column'
-            paddingRight='8px'
-            position='absolute'
-            top='80px'
-            right='0px'
-            minWidth='120px'
-            backgroundColor='black'
-            alignItems='center'
+        <Box display='flex' alignItems='center'>
+          {!breakPoint && (<Box
+            display="flex"
+            zIndex="2"
           >
-            <ul
-              style={{ listStyleType: 'none', textDecoration: 'none', justifyContent: 'end' }}
-            >
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  color={`${active === link.title ? '#ff9900' : 'white'}`}
-                  onClick={() => {
-                    setToggle(!toggle)
-                    setActive(link.title)
-                  }}
+            (<img
+              src={toggle ? close : menu}
+              alt="menu"
+              width='28px'
+              height='28px'
+              cursor="pointer"
+              onClick={() => setToggle(!toggle)}
+              zIndex='1000'
+            />
 
-                  style={{ marginTop: '5px' }}
-                >
-                  <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
-                    <Typography style={{ color: active === link.title ? '#ff9900' : 'white', fontSize: '14px' }}>
-                      {link.title}
-                    </Typography>
-                  </ScrollLink>
-                </li>
-              ))};
-            </ul>
+            {toggle && (<Box
+              display='flex'
+              flexDirection='column'
+              position='absolute'
+              top='80px'
+              right='0px'
+              backgroundColor='black'
+              alignItems='center'
+              justifyContent='flex-start'
+            >
+              <ul
+                style={{ listStyleType: 'none', textDecoration: 'none', margin: 0, padding: 0, marginBottom: -13 }}
+              >
+                {navLinks.map((link) => (
+                  <li
+                    key={link.id}
+                    color={`${active === link.title ? '#ff9900' : 'white'}`}
+                    onClick={() => {
+                      setToggle(!toggle)
+                      setActive(link.title)
+                    }}
+
+                    style={{ marginTop: '5px' }}
+                  >
+                    <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
+                      <Typography style={{ color: active === link.title ? '#ff9900' : 'white', fontSize: '14px' }}>
+                        {link.title}
+                      </Typography>
+                    </ScrollLink>
+                  </li>
+                ))};
+              </ul>
+              <Button style={{ borderRadius: '4px', border: '1px solid white', margin: '5px' }}>
+                <Typography variant='outlined' style={{ letterSpacing: '2px', color: 'white' }}>
+                  VIEW GALLERY
+                </Typography>
+              </Button>
+            </Box>
+            )}
           </Box>
           )}
-        </Box>
-        )}
-        {breakPoint && (
-          <Box
-            display='flex'
-            flexDirection='row'
-            zIndex='2'
-          >
-            <ul
-              style={{ listStyleType: 'none', textDecoration: 'none', justifyContent: 'end', display: 'flex' }}
+          {breakPoint && (
+            <Box
+              display='flex'
+              flexDirection='row'
+              zIndex='2'
             >
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  color={`${active === link.title ? '#ff9900' : 'white'}`}
-                  onClick={() => {
-                    setToggle(!toggle)
-                    setActive(link.title)
-                  }}
-                  style={{ marginRight: '15px', cursor: "pointer" }}
-                >
-                  <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
-                    <Typography style={{ color: active === link.title ? '#ff9900' : 'white', fontSize: '15px', fontWeight: '200', letterSpacing: '3px' }}>
-                      {link.title}
-                    </Typography>
-                  </ScrollLink>
-                </li>
-              ))};
-            </ul>
-          </Box>)}
+              <ul
+                style={{ listStyleType: 'none', textDecoration: 'none', justifyContent: 'end', display: 'flex' }}
+              >
+                {navLinks.map((link) => (
+                  <li
+                    key={link.id}
+                    color={`${active === link.title ? '#ff9900' : 'white'}`}
+                    onClick={() => {
+                      setToggle(!toggle)
+                      setActive(link.title)
+                    }}
+                    style={{ marginRight: '15px', cursor: "pointer" }}
+                  >
+                    <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
+                      <Typography style={{ color: active === link.title ? '#ff9900' : 'white', fontSize: '15px', fontWeight: '200', letterSpacing: '3px' }}>
+                        {link.title}
+                      </Typography>
+                    </ScrollLink>
+                  </li>
+                ))};
+              </ul>
+            </Box>
+          )}
+          {breakPoint && (
+            <Button style={{ borderRadius: '4px', border: '1px solid white' }}>
+              <Typography variant='outlined' style={{ letterSpacing: '2px', color: 'white' }}>
+                VIEW GALLERY
+              </Typography>
+            </Button>
+          )}
+        </Box>
       </Box>
     </Box >
   );
