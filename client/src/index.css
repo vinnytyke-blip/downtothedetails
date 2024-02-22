@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@200&family=Nanum+Myeongjo&family=Noto+Sans&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,7 +19,8 @@ body {
   color: white;
   text-decoration: none;
   position: relative;
-  padding-bottom: 8px; /* Add some padding at the bottom to space out the underline */
+  padding-bottom: 8px;
+  /* Add some padding at the bottom to space out the underline */
 }
 
 .nav-link:before {
@@ -28,16 +29,23 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Set the height to 2px to make the underline 2px thick */
-  background-color: white; /* Set the color of the underline to white */
-  visibility: hidden; /* Hide the underline by default */
-  transform: scaleX(0); /* Scale the underline to 0 width initially */
-  transition: transform 0.3s ease; /* Add a smooth transition effect for the underline */
+  height: 2px;
+  /* Set the height to 2px to make the underline 2px thick */
+  background-color: white;
+  /* Set the color of the underline to white */
+  visibility: hidden;
+  /* Hide the underline by default */
+  transform: scaleX(0);
+  /* Scale the underline to 0 width initially */
+  transition: transform 0.3s ease;
+  /* Add a smooth transition effect for the underline */
 }
 
 .nav-link:hover:before {
-  visibility: visible; /* Make the underline visible on hover */
-  transform: scaleX(1); /* Scale the underline to full width on hover */
+  visibility: visible;
+  /* Make the underline visible on hover */
+  transform: scaleX(1);
+  /* Scale the underline to full width on hover */
 }
 
 .quote-box {

@@ -98,10 +98,11 @@ function Navbar() {
                     setToggle(!toggle)
                     setActive(link.title)
                   }}
+
                   style={{ marginTop: '5px' }}
                 >
                   <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
-                    <Typography variant='h4' style={{ color: active === link.title ? '#ff9900' : 'white' }}>
+                    <Typography style={{ color: active === link.title ? '#ff9900' : 'white', fontSize: '14px' }}>
                       {link.title}
                     </Typography>
                   </ScrollLink>
@@ -129,10 +130,10 @@ function Navbar() {
                     setToggle(!toggle)
                     setActive(link.title)
                   }}
-                  style={{ marginRight: '10px', cursor: "pointer" }}
+                  style={{ marginRight: '15px', cursor: "pointer" }}
                 >
                   <ScrollLink to={link.id} smooth={true} duration={500} className="" offset={-100}>
-                    <Typography variant='h4' style={{ color: active === link.title ? '#ff9900' : 'white' }}>
+                    <Typography style={{ color: active === link.title ? '#ff9900' : 'white', fontSize: '15px', fontWeight: '200', letterSpacing: '3px' }}>
                       {link.title}
                     </Typography>
                   </ScrollLink>

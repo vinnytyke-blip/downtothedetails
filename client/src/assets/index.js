@@ -24,19 +24,19 @@ const testimonials = [
 const navLinks = [
     {
         id: "services",
-        title: "Services",
+        title: "SERVICES",
     },
     {
         id: "about",
-        title: "About Us",
+        title: "ABOUT US",
     },
     {
         id: "quote",
-        title: "Quote",
+        title: "QUOTE",
     },
     {
         id: "footer",
-        title: "Contact"
+        title: "CONTACT"
     }
 ];
 
