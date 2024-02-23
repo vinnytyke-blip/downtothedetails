@@ -6,12 +6,12 @@ import testImage from './dangers-of-rust.jpg'
 const Gallery = ({ onClose }) => {
     return (
         <div className="gallery-overlay">
-            <div className="gallery-container">
+            <div className="gallery-container" style={{ padding: '10px' }}>
                 <button className="close-button" onClick={onClose}>Close Gallery</button>
                 <ResponsiveMasonry
                     columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
                 >
-                    <Masonry style={{ padding: '10px' }}>
+                    <Masonry gutter="20px">
                         {images.map((image, i) => (
                             <div key={i} >
                                 <img
@@ -28,11 +28,6 @@ const Gallery = ({ onClose }) => {
                     </Masonry>
                 </ResponsiveMasonry>
             </div>
-            {/* <img
-                src={testImage}
-                style={{ width: '100%', display: 'block' }}
-            /> */}
-            Hello
         </div>
     )
 }
