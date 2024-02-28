@@ -6,11 +6,13 @@ import greenCheck from './prophotos/accept.png';
 import menu from './prophotos/menu.svg';
 import close from './prophotos/close.svg';
 import animationData from './animation_lksxakfb.json';
-import photo1 from './herophotos/aIMG_6578.jpeg';
-import photo2 from './herophotos/bIMG_6601.jpeg';
-import photo3 from './herophotos/IMG_6572.jpeg';
-import photo4 from './herophotos/IMG_6585.jpeg';
-import photo5 from './herophotos/IMG_6602.jpeg';
+import photo1 from './prophotos/IMG_0051.jpeg';
+import photo2 from './prophotos/IMG_0052.jpeg';
+import photo3 from './prophotos/IMG_0053.jpeg';
+import photo4 from './prophotos/IMG_0054.jpeg';
+import photo5 from './prophotos/IMG_0055.jpeg';
+import photo6 from './prophotos/IMG_0056.jpeg';
+import photo7 from './prophotos/IMG_0057.jpeg';
 
 const testimonials = [
     {
@@ -213,7 +215,9 @@ const images = [
     photo2,
     photo3,
     photo4,
-    photo5
+    photo5,
+    photo6,
+    photo7,
 ]
 
 export {
