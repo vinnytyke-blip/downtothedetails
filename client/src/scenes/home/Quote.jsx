@@ -7,6 +7,7 @@ import { animationData, quoteConfig } from "../../assets";
 const Quote = () => {
   const [service, setService] = useState('Gold');
   const [carType, setCarType] = useState('car');
+  const [quoteCheck, setQuoteCheck] = useState(true);
   const [packageType, setPackageType] = useState('full');
   const [quote, setQuote] = useState(0);
   const [plusEngine, setPlusEngine] = useState('ADD ENGINE DETAIL')
@@ -26,7 +27,10 @@ const Quote = () => {
 
   const generateQuote = () => {
     const selectedQuote = quoteConfig[service]?.[carType]?.[packageType];
-    if (selectedQuote) {
+    if (quote == 95) {
+      setQuote(selectedQuote + 95)
+    }
+    else if (selectedQuote) {
       setQuote(selectedQuote);
     } else {
       setQuote("Please select valid options to get a quote.");
