@@ -115,7 +115,7 @@ function Navbar() {
                   </li>
                 ))};
               </ul>
-              <Button style={{ borderRadius: '4px', border: '1px solid white', margin: '5px' }}>
+              <Button style={{ borderRadius: '4px', border: '1px solid white', margin: '5px' }} onClick={toggleGallery} >
                 <Typography variant='outlined' style={{ letterSpacing: '2px', color: 'white' }}>
                   VIEW GALLERY
                 </Typography>
