@@ -110,7 +110,7 @@ const MainCarousel = () => {
               showIndicators={false}
               showStatus={false}
               autoPlay={true}
-              interval={3000}
+              interval={6000}
               renderArrowPrev={(onClickHandler, hasPrev, label) => (
                 <IconButton
                   onClick={onClickHandler}
