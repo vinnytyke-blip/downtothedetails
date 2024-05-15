@@ -7,7 +7,6 @@ import { animationData, quoteConfig } from "../../assets";
 const Quote = () => {
   const [service, setService] = useState('Gold');
   const [carType, setCarType] = useState('car');
-  const [quoteCheck, setQuoteCheck] = useState(true);
   const [packageType, setPackageType] = useState('full');
   const [quote, setQuote] = useState(0);
   const [plusEngine, setPlusEngine] = useState('ADD ENGINE DETAIL')

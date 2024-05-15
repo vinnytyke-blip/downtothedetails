@@ -30,7 +30,7 @@ const Gallery = ({ onClose }) => {
                             <div key={i} >
                                 <img
                                     src={image}
-                                    style={{ width: '100%', display: 'block' }}
+                                    style={{ width: '100%', maxHeight: '100%', display: 'block' }}
                                     alt={`Image ${i}`}
                                 />
                             </div>
