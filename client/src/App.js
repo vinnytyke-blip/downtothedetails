@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 import MainCarousel from "./scenes/home/MainCarousel";
 import Testimonials from "./scenes/home/Testimonials";
@@ -21,7 +21,7 @@ const ScrollToTop = () => {
 };
 
 function App() {
-  const apiKey = process.env.REACT_APP_API_KEY;
+  // const apiKey = process.env.REACT_APP_API_KEY;
   return (
     <div className="app">
       <BrowserRouter>

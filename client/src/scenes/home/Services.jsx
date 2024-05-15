@@ -137,7 +137,7 @@ const Services = () => {
           alignItems='center'
         >
           <Typography fontStyle='italic'>
-            Disclaimer: Dog Hair will be an up charge of $75
+            Disclaimer: Pet Hair will be an up charge of $75
           </Typography>
         </Box>
         <Box

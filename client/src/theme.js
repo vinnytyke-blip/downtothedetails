@@ -118,7 +118,6 @@ export const theme = createTheme({
           maxHeight: "60px",
           minHeight: "60px",
           fontSize: "18px",
-          letterSpacing: '4px',
           boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)',
         },
       },

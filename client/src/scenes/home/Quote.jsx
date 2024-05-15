@@ -26,7 +26,7 @@ const Quote = () => {
 
   const generateQuote = () => {
     const selectedQuote = quoteConfig[service]?.[carType]?.[packageType];
-    if (quote == 95) {
+    if (quote === 95) {
       setQuote(selectedQuote + 95)
     }
     else if (selectedQuote) {

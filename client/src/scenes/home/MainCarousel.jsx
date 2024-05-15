@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { instaphoto } from '../../assets';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 
 // imports all images from assets folder

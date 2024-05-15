@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { images } from "../../assets";
-import testImage from './dangers-of-rust.jpg'
 
 const Gallery = ({ onClose }) => {
     const galleryRef = useRef(null);
@@ -31,7 +30,7 @@ const Gallery = ({ onClose }) => {
                                 <img
                                     src={image}
                                     style={{ width: '100%', maxHeight: '100%', display: 'block' }}
-                                    alt={`Image ${i}`}
+                                    alt={`${i}`}
                                 />
                             </div>
                         ))}
