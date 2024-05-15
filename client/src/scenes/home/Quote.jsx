@@ -37,7 +37,7 @@ const Quote = () => {
   };
 
   const addEngine = () => {
-    setQuote(prevQuote => prevQuote + (plusEngine === 'ADD ENGINE DETAIL' ? 95 : -95));
+    setQuote(prevQuote => prevQuote + (plusEngine === 'ADD ENGINE DETAIL' ? 114 : -114));
     setPlusEngine(prevPlusEngine => prevPlusEngine === 'ADD ENGINE DETAIL' ? 'ENGINE DETAIL ADDED!' : 'ADD ENGINE DETAIL');
   }
 
