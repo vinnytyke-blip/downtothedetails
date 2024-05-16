@@ -58,11 +58,6 @@ const interiorServices = {
         { name: 'Steam Cleaning Treatment' },
         { name: 'Full Interior Dust/Wipe Down/Disinfect' },
         { name: 'Stain Spot Treatment Throughout Vehicle' },
-        // { name: 'In-Depth Detail of the Center Console' },
-        // { name: 'Windows Cleaning' },
-        // { name: 'Door Panels/Jams Cleaning' },
-        // { name: 'All Stains Removed to the Best of Their Ability' },
-        // { name: 'All Seats Shampooed' },
     ],
     silver: [
         { name: 'Full Interior Vacuum' },
@@ -71,21 +66,12 @@ const interiorServices = {
         { name: 'All Windows Cleaned and Polished' },
         { name: 'AC Vents Cleaning' },
         { name: 'Floor Mats Extracted Cleaned/Shampooed' },
-        // { name: 'Full Interior Dust/Wipe Down/Disinfect' },
-        // { name: 'In-Depth Detail of the Center Console' }, ,
-        // { name: 'All Seats Shampooed' },
-        // { name: 'Windows Cleaning' },
-        // { name: 'Door Panels/Jams Cleaning' },
     ],
     bronze: [
         { name: 'Full Interior Vacuum' },
         { name: 'All Seats Vacuumed and Wiped Down' },
         { name: 'Dash, Center Console, Door Panels Cleaned and Disinfected' },
         { name: 'All Windows Cleaned and Polished' },
-        // { name: 'Full Interior Dust/Wipe Down/Disinfect' },
-        // { name: 'In-Depth Detail of the Center Console' },
-        // { name: 'Windows Cleaning' },
-        // { name: 'Door Panels/Jams Cleaning' },
     ],
 };
 
@@ -100,8 +86,6 @@ const exteriorServices = {
         { name: 'Plastic Shine Restorer' },
         { name: 'Paint Decontamination/Clay Bar Treatment' },
         { name: 'Compressed Air Dry' },
-        // { name: 'Clay Bar Treatment' },
-        // { name: 'Clay Bar Treatment (if necessary)' },
     ],
     silver: [
         { name: 'Foam Cannon Hand Wash/Dry' },
@@ -110,14 +94,12 @@ const exteriorServices = {
         { name: 'Bug/Tar Removal' },
         { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
         { name: 'Tire Dressing Applied' },
-        // { name: 'Clay Bar Treatment (if necessary)' },
     ],
     bronze: [
         { name: 'Foam Cannon Hand Wash/Dry' },
         { name: 'Tires and Rims Cleaned/Polished' },
         { name: 'Windows Cleaned' },
         { name: 'Bug/Tar Removal' },
-        // { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
     ],
 };
 
@@ -130,13 +112,7 @@ const interiorServicesTwo = [
     { name: 'Floor Mats Extracted Cleaned/Shampooed' },
     { name: 'Full Interior Dust/Wipe Down/Disinfect' },
     { name: 'Stain Spot Treatment Throughout Vehicle' },
-    // { name: 'In-Depth Detail of the Center Console' },
-    // { name: 'Windows Cleaning' },
-    // { name: 'Door Panels/Jams Cleaning' },
-    // { name: 'All Seats Shampooed' },
     { name: 'Steam Cleaning Treatment' },
-    // { name: 'All Stains Removed to the Best of Their Ability' }, // Repeated in silver // Repeated in silver
-    // Any other repeated services from silver or bronze can be added here as well
 ];
 
 const exteriorServicesTwo = [
@@ -149,11 +125,7 @@ const exteriorServicesTwo = [
     { name: 'Plastic Shine Restorer' },
     { name: 'Paint Decontamination/Clay Bar Treatment' },
     { name: 'Compressed Air Dry' },
-    // { name: 'Clay Bar Treatment (if necessary)' },
-    // { name: 'Clay Bar Treatment' },
 ];
-
-// Now you can handle interiorServices and exteriorServices as arrays without the categorization.
 
 
 const quoteConfig = {
