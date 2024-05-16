@@ -128,7 +128,7 @@ const Quote = () => {
             </Button>
 
             <Button
-              variant="filled"
+              variant="filledTwo"
               style={{
                 backgroundColor: 'black',
               }}

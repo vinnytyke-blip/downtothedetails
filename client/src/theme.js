@@ -41,12 +41,11 @@ export const theme = createTheme({
     fontFamily: ["Inter", "sans-serif"].join(","),
     fontSize: 14,
     h1: {
-      fontFamily: ["Noto Sana", "sans-serif"].join(","),
-      // fontSize: 60,
+      fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
       marginLeft: -3,
     },
     h2: {
-      fontFamily: ["Noto Sana", "sans-serif"].join(","),
+      fontFamily: ["Roboto Condensed", "sans-serif"].join(","),
       fontSize: 36,
     },
     h3: {
@@ -117,6 +116,13 @@ export const theme = createTheme({
           letterSpacing: '4px',
           maxHeight: "60px",
           minHeight: "60px",
+          fontSize: "18px",
+          boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)',
+        },
+        filledTwo: {
+          letterSpacing: '4px',
+          maxHeight: "50px",
+          minHeight: "50px",
           fontSize: "18px",
           boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)',
         },
