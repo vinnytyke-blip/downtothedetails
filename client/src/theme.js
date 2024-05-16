@@ -79,32 +79,6 @@ export const theme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
-        containedd: {
-          borderTopLeftRadius: '8px',
-          borderTopRightRadius: '8px',
-          borderBottomLeftRadius: '0',
-          borderBottomRightRadius: '0',
-          maxHeight: "70px",
-          minHeight: "70px",
-          fontSize: "18px",
-          letterSpacing: '4px',
-        },
-        containedu: {
-          borderTopLeftRadius: '0',
-          borderTopRightRadius: '0',
-          borderBottomLeftRadius: '8px',
-          borderBottomRightRadius: '8px',
-          maxHeight: "70px",
-          minHeight: "70px",
-          fontSize: "18px",
-          letterSpacing: '4px',
-        },
-        containeda: {
-          maxHeight: "60px",
-          minHeight: "60px",
-          fontSize: "18px",
-          letterSpacing: '4px',
-        },
         outlined: {
           letterSpacing: '4px',
           borderRadius: '0',
