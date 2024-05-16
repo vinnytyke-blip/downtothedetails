@@ -12,7 +12,7 @@ const Quote = () => {
   const [plusEngine, setPlusEngine] = useState('ADD ENGINE DETAIL')
   const breakPoint = useMediaQuery('(min-width:1000px)');
 
-  const bestSellers = [205, 220, 235, 190, 175, 300, 315, 330, 285, 270]
+  const bestSellers = [246, 264, 282, 228, 210, 360, 378, 396, 342, 324]
 
   const handleChange = (event) => {
     setService(event.target.value);
