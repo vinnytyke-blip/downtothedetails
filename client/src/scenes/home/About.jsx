@@ -3,7 +3,7 @@ import { portrait } from "../../assets";
 import { useMediaQuery } from "@mui/material";
 
 const About = () => {
-  const isNonMobile = useMediaQuery("(min-width:800px)");
+  const isNonMobile = useMediaQuery("(min-width:1100px)");
   return (
     <div id='about'>
       <Box
@@ -25,7 +25,7 @@ const About = () => {
             style={{ maxWidth: '100%', maxHeight: '100%' }}
           />
         </Box>
-        <Box width={{ sm: '100%', md: '50%' }} alignItems='center' display='flex' padding={{ xs: '10px', md: '30px' }} >
+        <Box width={isNonMobile ? '50%' : '100%'} alignItems='center' display='flex' padding={{ xs: '10px', md: '30px' }} >
           <Box>
             <Typography variant="h1" fontSize={['30px', '40px']}>Down to the Details: Proficient Automotive Detailing</Typography>
             <Typography paddingTop={'5px'} paddingBottom={'5px'} letterSpacing={'0.1em'}>A clean vehicle, a clean image, and a clean lifestyle.</Typography>
