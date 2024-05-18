@@ -13,6 +13,10 @@ import photo4 from './prophotos/IMG_0054.jpeg';
 import photo5 from './prophotos/IMG_0055.jpeg';
 import photo6 from './prophotos/IMG_0056.jpeg';
 import photo7 from './prophotos/IMG_0057.jpeg';
+import photo8 from './prophotos/E3D84A4F-031A-46B7-B17D-CE1FF5C87F22.jpg';
+import photo9 from './prophotos/IMG_0760.jpg';
+import photo10 from './prophotos/IMG_1517.jpg';
+import photo11 from './prophotos/IMG_1538.jpg';
 
 const testimonials = [
     {
@@ -190,6 +194,10 @@ const images = [
     photo5,
     photo6,
     photo7,
+    photo8,
+    photo9,
+    photo10,
+    photo11,
 ]
 
 export {
