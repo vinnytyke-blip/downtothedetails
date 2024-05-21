@@ -27,7 +27,7 @@ const About = () => {
         </Box>
         <Box width={isNonMobile ? '50%' : '100%'} alignItems='center' display='flex' padding={{ xs: '10px', md: '30px' }} >
           <Box>
-            <Typography variant="h1" fontSize={['30px', '40px']}>Down to the Details: Proficient Automotive Detailing</Typography>
+            <Typography variant="h1" fontSize={['30px', '40px']}>Down to the Details: Professional Automotive Detailing</Typography>
             <Typography paddingTop={'5px'} paddingBottom={'5px'} letterSpacing={'0.1em'}>A clean vehicle, a clean image, and a clean lifestyle.</Typography>
             <Typography variant="h2" marginTop="20px" lineHeight='1.5' letterSpacing='0.1em'>
               Our Mission:
