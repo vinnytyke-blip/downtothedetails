@@ -64,7 +64,7 @@ function Navbar() {
           <img src={logo} alt="Washing" style={{ width: '150px', height: '80px', objectFit: 'cover', borderRadius: '4px' }} />
           {showTypography && (
             <Typography variant="h2" style={{ color: "white" }}>
-              Down To The Details L.L.C.
+              Down To The Details
             </Typography>
           )}
         </Box>
