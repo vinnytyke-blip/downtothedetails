@@ -3,7 +3,7 @@ import { Box, IconButton, Button, Typography, useMediaQuery } from "@mui/materia
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { instaphoto } from '../../assets';
+import { car, instaphoto } from '../../assets';
 import React from 'react';
 
 
@@ -85,7 +85,24 @@ const MainCarousel = () => {
                   rel="noopener noreferrer"
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
-                  <Button variant="outlined" sx={{ borderRadius: '0', width: { sm: '100%', md: '500px' }, height: '50px', fontWeight: 'bolder' }}>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      borderRadius: '0',
+                      width: { sm: '100%', md: '500px' },
+                      height: '50px',
+                      fontWeight: 'bolder',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: 1, // Add space between text and icon
+                    }}
+                  >
+                    <img
+                      src={car} // Replace with your image path
+                      alt="Appointment Icon"
+                      style={{ width: '50px', height: '50px' }} // Adjust size as needed
+                    />
                     SCHEDULE AN APPOINTMENT
                   </Button>
                 </a>

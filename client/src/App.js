@@ -8,6 +8,7 @@ import Quote from "./scenes/home/Quote";
 import About from "./scenes/home/About";
 import NavBar from './scenes/global/Navbar';
 import Footer from "./scenes/global/Footer";
+import Threestep from "./scenes/home/Threestep";
 
 
 const ScrollToTop = () => {
@@ -31,6 +32,7 @@ function App() {
           <MainCarousel />
         </Box>
         <Box position="relative" marginTop='100vh' zIndex={2} bgcolor='white'>
+          <Threestep />
           <Services />
           <Quote />
           <About />

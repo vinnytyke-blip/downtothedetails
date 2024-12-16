@@ -17,10 +17,15 @@ import photo8 from './prophotos/E3D84A4F-031A-46B7-B17D-CE1FF5C87F22.jpg';
 import photo9 from './prophotos/IMG_0760.jpg';
 import photo10 from './prophotos/IMG_1517.jpg';
 import photo11 from './prophotos/IMG_1538.jpg';
+import car from './prophotos/car.png'
+import phone from './foursteps/phone-call.png';
+import sunbathe from './foursteps/sunbathing.png';
+import valet from './foursteps/valet-parking.png';
+import pickup from './foursteps/rental-car.png'
 
 const testimonials = [
     {
-        text: "Came in with my PORSHE Cayenne that I was ready to sell. He did a great job especially for the pricing. Returned it looking better than ever! Would highly recommend and will be coming back with my daily as well. He doesn’t just sell his service but himself as well!",
+        text: "Came in with my PORSCHE Cayenne that I was ready to sell. He did a great job especially for the pricing. Returned it looking better than ever! Would highly recommend and will be coming back with my daily as well. He doesn’t just sell his service but himself as well!",
         name: 'AMADEUS COLEMAN'
     },
     {
@@ -200,6 +205,29 @@ const images = [
     photo11,
 ]
 
+const fourstep = [
+    {
+        image: phone,
+        title: "Call or Schedule Online",
+        text: "Call or schedule your appointment through our website. Select the date, time, and desired service package from our options: Gold, Silver, or Bronze (Interior, Exterior, or Both)."
+    },
+    {
+        image: valet,
+        title: "Drop Your Vehicle Off at Our Location",
+        text: "We are located ¼ mile away from Tempe Marketplace, at the corner of Rio Salado Pkwy and McClintock. Please be ready to drop your vehicle off at our facility while we complete the automotive detailing."
+    },
+    {
+        image: sunbathe,
+        title: "Uber/Lyft",
+        text: "Our facility does not have a waiting room on the premises, so please plan accordingly. A text message will be sent once we start the detail, notifying you when your vehicle will be ready for pickup."
+    },
+    {
+        image: pickup,
+        title: "Pick Up Your Vehicle/See and Feel the Difference",
+        text: "Enjoy a comprehensive walkthrough of all the detailing work completed on your vehicle. Drive away with a car that shines, smells fresh, and feels new."
+    }
+]
+
 export {
     instaphoto,
     satisfaction,
@@ -217,4 +245,6 @@ export {
     exteriorServicesTwo,
     quoteConfig,
     images,
+    car,
+    fourstep,
 };
