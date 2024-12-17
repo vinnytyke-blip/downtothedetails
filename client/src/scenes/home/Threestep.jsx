@@ -34,6 +34,7 @@ const StepItem = ({ step }) => {
     padding: '12px',  // Increase padding slightly
     gap: '16px',     // Slightly increase gap
     fontSize: '16px', // Increase font size
+    flexDirection: 'row',
   };
 
   const largeScreenStyles = {
@@ -75,17 +76,20 @@ const StepItem = ({ step }) => {
         {step.title}
       </h3>
 
-      <div
-        style={{
-          margin: 0,
-          lineHeight: '1.5',
-          maxHeight: '200px',
-        }}
-      >
-        {step.text}
-      </div>
+      {!(window.innerWidth <= 600) && (
+        <div
+          style={{
+            margin: 0,
+            lineHeight: '1.5',
+            maxHeight: '200px',
+          }}
+        >
+          {step.text}
+        </div>
+      )}
     </div>
   );
+
 };
 
 const Threestep = () => {
