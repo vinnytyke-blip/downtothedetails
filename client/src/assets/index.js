@@ -209,22 +209,22 @@ const fourstep = [
     {
         image: phone,
         title: "Call or Schedule Online",
-        text: "Call or schedule your appointment through our website. Select the date, time, and desired service package from our options: Gold, Silver, or Bronze (Interior, Exterior, or Both)."
+        text: "Easily book your appointment on our website by selecting the date, time, and service package (Gold, Silver, or Bronze) for interior, exterior, or both"
     },
     {
         image: valet,
         title: "Drop Your Vehicle Off at Our Location",
-        text: "We are located ¼ mile away from Tempe Marketplace, at the corner of Rio Salado Pkwy and McClintock. Please be ready to drop your vehicle off at our facility while we complete the automotive detailing."
+        text: "We’re located ¼ mile from Tempe Marketplace, at the corner of Rio Salado Pkwy and McClintock. Drop off your vehicle for detailing"
     },
     {
         image: sunbathe,
         title: "Uber/Lyft",
-        text: "Our facility does not have a waiting room on the premises, so please plan accordingly. A text message will be sent once we start the detail, notifying you when your vehicle will be ready for pickup."
+        text: "As we don’t have a waiting room, plan accordingly. You’ll receive a text when your vehicle is ready for pickup"
     },
     {
         image: pickup,
         title: "Pick Up Your Vehicle/See and Feel the Difference",
-        text: "Enjoy a comprehensive walkthrough of all the detailing work completed on your vehicle. Drive away with a car that shines, smells fresh, and feels new."
+        text: "Enjoy a walkthrough of the completed detailing and drive away with a car that looks, smells, and feels like new"
     }
 ]
 
