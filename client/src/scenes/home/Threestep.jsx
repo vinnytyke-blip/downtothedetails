@@ -59,7 +59,7 @@ const StepItem = ({ step }) => {
             : largeScreenStyles
       }
     >
-      <div
+      {!(window.innerWidth <= 600) && (<div
         style={{
           position: window.innerWidth <= 1150 ? 'relative' : 'absolute',  // Ensures the step number is in the top left corner
           top: window.innerWidth <= 1150 ? '' : '10px',
@@ -70,7 +70,7 @@ const StepItem = ({ step }) => {
         }}
       >
         Step {step.num}
-      </div>
+      </div>)}
       <img
         src={step.image}
         alt={step.title}

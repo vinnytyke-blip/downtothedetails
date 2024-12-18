@@ -56,6 +56,7 @@ const Phonehero = () => {
                                 <img
                                     src={portraitmain} // Replace with your image source
                                     alt="Circle Image"// Image height
+                                    borderRadius='50%'
                                 />
                             </Box>
 
