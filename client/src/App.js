@@ -12,6 +12,7 @@ import NavBar from './scenes/global/Navbar';
 import Footer from "./scenes/global/Footer";
 import Threestep from "./scenes/home/Threestep";
 import Phonehero from "./scenes/home/Phonehero";
+import { Contact } from "./scenes/home/Contact";
 
 
 const ScrollToTop = () => {
@@ -42,6 +43,7 @@ function App() {
           <Quote />
           <About />
           <Testimonials />
+          <Contact />
           <Footer />
         </Box>
       </BrowserRouter>

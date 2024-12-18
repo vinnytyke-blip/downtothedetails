@@ -1,6 +1,6 @@
 
-import { Box, Button, Typography, useMediaQuery } from "@mui/material";
-import { car, instaphoto, heroTwo } from '../../assets';
+import { Box, Button, Typography } from "@mui/material";
+import { car, instaphoto, tiktok, heroTwo } from '../../assets';
 import React from 'react';
 
 
@@ -53,7 +53,7 @@ const Phonehero = () => {
                             >
                                 <img
                                     src={heroTwo} // Replace with your image source
-                                    alt="Circle Image"
+                                    alt="Circle portrait"
                                     style={{
                                         width: '100%', // Image fills the container
                                         height: '100%', // Image fills the container
@@ -122,18 +122,40 @@ const Phonehero = () => {
                                     </Button>
                                 </a>
                             </Box>
-                            <Box marginTop='5px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
-                                <Box marginTop='4px' marginRight='15px'>
-                                    <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
-                                        <img
-                                            src={instaphoto}
-                                            alt="Instagram"
-                                            width="30" // Set the width of the image as needed
-                                            height="30" // Set the height of the image as needed
-                                        />
-                                    </a>
-                                </Box>
+                            <Box
+                                marginTop="5px"
+                                marginBottom="10px"
+                                display="flex"
+                                alignItems="center"
+                                maxWidth="90%"
+                                gap="20px"
+                            >
+                                <a
+                                    href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={instaphoto}
+                                        alt="Instagram"
+                                        width="30"
+                                        height="30"
+                                    />
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@down2detail602?_t=ZT-8sKM2PkNRLa&_r=1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={tiktok}
+                                        alt="TikTok"
+                                        width="30"
+                                        height="30"
+                                    />
+                                </a>
                             </Box>
+
                         </Box>
                     </Box>
                 </Box>

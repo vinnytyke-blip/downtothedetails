@@ -1,4 +1,5 @@
 import instaphoto from './prophotos/instagram.png';
+import tiktok from './prophotos/tiktok.png';
 import satisfaction from './prophotos/satisfaction.png';
 import portrait from './prophotos/IMG_6599.jpeg';
 import checked from './prophotos/acceptb.png';
@@ -245,6 +246,7 @@ const fourstep = [
 
 export {
     instaphoto,
+    tiktok,
     satisfaction,
     portrait,
     checked,

@@ -3,7 +3,7 @@ import { Box, IconButton, Button, Typography, useMediaQuery } from "@mui/materia
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { car, instaphoto } from '../../assets';
+import { car, instaphoto, tiktok } from '../../assets';
 import React from 'react';
 
 
@@ -55,26 +55,71 @@ const MainCarousel = () => {
               justifyContent='center'
               alignItems='center'
             >
+              {/* <Typography
+                variant="h1"
+                fontSize={['42px', '60px']}
+              > */}
               <Typography
                 variant="h1"
                 fontSize={['42px', '60px']}
+                align="center"
+                sx={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  marginLeft: '10px' // Space between links and text
+                }}
               >
+
                 Down to the Details
               </Typography>
 
-              <Box marginTop='5px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
-                <Box marginTop='4px' marginRight='15px'>
-                  <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
+              <Box
+                marginTop="5px"
+                marginBottom="10px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                maxWidth="90%"
+                gap="20px"
+              >
+                {/* Social Links */}
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  gap="20px"
+                >
+                  <a
+                    href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src={instaphoto}
                       alt="Instagram"
-                      width="30" // Set the width of the image as needed
-                      height="30" // Set the height of the image as needed
+                      width="30"
+                      height="30"
+                    />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@down2detail602?_t=ZT-8sKM2PkNRLa&_r=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={tiktok}
+                      alt="TikTok"
+                      width="30"
+                      height="30"
                     />
                   </a>
                 </Box>
-                <Typography variant="h8" >A clean vehicle, a clean image, and a clean lifestyle</Typography>
+
+                {/* Centered Text */}
+                <Typography variant="h8">
+                  A clean vehicle, a clean image, and a clean lifestyle
+                </Typography>
               </Box>
+
               <Box
                 justifyContent='center'
                 display='flex'
