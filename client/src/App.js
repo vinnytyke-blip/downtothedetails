@@ -43,7 +43,7 @@ function App() {
           <Quote />
           <About />
           <Testimonials />
-          <Contact />
+          {/* <Contact /> */}
           <Footer />
         </Box>
       </BrowserRouter>
