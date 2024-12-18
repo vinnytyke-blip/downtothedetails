@@ -23,6 +23,8 @@ import sunbathe from './foursteps/sunbathing.png';
 import valet from './foursteps/valet-parking.png';
 import pickup from './foursteps/rental-car.png';
 import portraitmain from './holder.jpg';
+import heroOne from './heroOne.jpeg';
+import heroTwo from './heroTwo.jpg';
 
 const testimonials = [
     {
@@ -253,4 +255,6 @@ export {
     car,
     fourstep,
     portraitmain,
+    heroOne,
+    heroTwo,
 };

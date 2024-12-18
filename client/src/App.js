@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import MainCarousel from "./scenes/home/MainCarousel";
 import Testimonials from "./scenes/home/Testimonials";
 import Services from "./scenes/home/Services";
@@ -23,14 +25,16 @@ const ScrollToTop = () => {
 };
 
 function App() {
-  // const apiKey = process.env.REACT_APP_API_KEY;
+  const isPhoneView = useMediaQuery('(max-width:650px)');
+
+
   return (
     <div className="app">
       <BrowserRouter>
         <NavBar />
         <ScrollToTop />
         <Box position='fixed' zIndex='1'>
-          <MainCarousel />
+          {isPhoneView ? <Phonehero /> : <MainCarousel />}
         </Box>
         <Box position="relative" marginTop='100vh' zIndex={2} bgcolor='white'>
           <Threestep />

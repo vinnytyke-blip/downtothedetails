@@ -1,15 +1,10 @@
-import { Carousel } from "react-responsive-carousel";
-import { Box, IconButton, Button, Typography, useMediaQuery } from "@mui/material";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { car, instaphoto, portraitmain } from '../../assets';
+
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import { car, instaphoto, heroTwo } from '../../assets';
 import React from 'react';
 
 
-
 const Phonehero = () => {
-    const isNonMobile = useMediaQuery("(min-width:600px)");
 
     return (
         <div id="top">
@@ -29,7 +24,7 @@ const Phonehero = () => {
                 >
                     <Box
                         display='flex'
-                        top='50%'
+                        top='40%'
                         width={{ sm: '100%', md: '600px' }}
                         height='100%'
                         alignItems='center'
@@ -46,36 +41,56 @@ const Phonehero = () => {
                             alignItems='center'
                         >
                             <Box
-                                display='flex'
-                                alignItems='center'
-                                justifyContent='center'
-                                borderRadius='50%' // Makes the image circular
-                                width='100px' // Set the width to 10px // Set the height to 10px
-                                backgroundColor='grey' // Set a background color if needed
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                width="70vw" // 90% of the viewport width
+                                maxWidth='650px'
+                                aspectRatio="1" // Ensures it remains a perfect circle
+                                overflow="hidden" // Ensures the image doesn’t overflow
+                                marginY='30px'
+                                boxShadow='10px 15px 8px rgba(0, 0, 0, 0.8)'
                             >
                                 <img
-                                    src={portraitmain} // Replace with your image source
-                                    alt="Circle Image"// Image height
-                                    borderRadius='50%'
+                                    src={heroTwo} // Replace with your image source
+                                    alt="Circle Image"
+                                    style={{
+                                        width: '100%', // Image fills the container
+                                        height: '100%', // Image fills the container
+                                        objectFit: 'cover', // Ensures image scales properly without distortion
+                                    }}
                                 />
                             </Box>
 
-                            <Box marginTop='5px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
-                                <Box marginTop='4px' marginRight='15px'>
-                                    <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
-                                        <img
-                                            src={instaphoto}
-                                            alt="Instagram"
-                                            width="30" // Set the width of the image as needed
-                                            height="30" // Set the height of the image as needed
-                                        />
-                                    </a>
-                                </Box>
-                                <Typography variant="h8" >A clean vehicle, a clean image, and a clean lifestyle</Typography>
+                            {/* <Box marginTop='15px' marginBottom='15px' display='flex' alignItems='center' maxWidth='90%'>
+                                <Typography variant="h8" fontSize='12px' letterSpacing='2px'>
+                                    I'm Vinny Teich, founder of Down to the Details LLC. We help busy professionals keep their vehicles immaculate with expert detailing services designed for premium care.
+                                </Typography>
+                            </Box> */}
+                            <Box
+                                marginTop='15px'
+                                marginBottom='15px'
+                                display='flex'
+                                alignItems='center'
+                                maxWidth='90%'
+                            >
+                                <Typography
+                                    variant="h8"
+                                    fontSize='12px'
+                                    letterSpacing='2px'
+                                    fontStyle='italic'
+                                    color='#555' // Subtle color for elegance
+                                    lineHeight='1.6' // Better readability
+                                    textAlign='center'
+                                >
+                                    I'm Vinny Teich, founder of Down to the Details LLC. We help busy professionals keep their vehicles immaculate with expert detailing services designed for premium care.
+                                </Typography>
                             </Box>
+
                             <Box
                                 justifyContent='center'
                                 display='flex'
+                                marginBottom='10px'
                             >
                                 <a
                                     href="https://calendly.com/down2the_detail/estimate?month=2023-07"
@@ -101,9 +116,23 @@ const Phonehero = () => {
                                             alt="Appointment Icon"
                                             style={{ width: '50px', height: '50px' }} // Adjust size as needed
                                         />
-                                        SCHEDULE AN APPOINTMENT
+                                        <Typography style={{ fontSize: '10px' }}>
+                                            SCHEDULE AN APPOINTMENT
+                                        </Typography>
                                     </Button>
                                 </a>
+                            </Box>
+                            <Box marginTop='5px' marginBottom='10px' display='flex' alignItems='center' maxWidth='90%'>
+                                <Box marginTop='4px' marginRight='15px'>
+                                    <a href="https://www.instagram.com/down2the_detail/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={instaphoto}
+                                            alt="Instagram"
+                                            width="30" // Set the width of the image as needed
+                                            height="30" // Set the height of the image as needed
+                                        />
+                                    </a>
+                                </Box>
                             </Box>
                         </Box>
                     </Box>
