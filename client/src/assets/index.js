@@ -21,7 +21,8 @@ import car from './prophotos/car.png'
 import phone from './foursteps/phone-call.png';
 import sunbathe from './foursteps/sunbathing.png';
 import valet from './foursteps/valet-parking.png';
-import pickup from './foursteps/rental-car.png'
+import pickup from './foursteps/rental-car.png';
+import portraitmain from './holder.jpg';
 
 const testimonials = [
     {
@@ -209,22 +210,26 @@ const fourstep = [
     {
         image: phone,
         title: "Call or Schedule Online",
-        text: "Easily book your appointment on our website by selecting the date, time, and service package (Gold, Silver, or Bronze) for interior, exterior, or both"
+        text: "Easily book your appointment on our website by selecting the date, time, and service package (Gold, Silver, or Bronze) for interior, exterior, or both",
+        num: "1"
     },
     {
         image: valet,
         title: "Drop Your Vehicle Off at Our Location",
-        text: "We’re located ¼ mile from Tempe Marketplace, at the corner of Rio Salado Pkwy and McClintock. Drop off your vehicle for detailing"
+        text: "We’re located ¼ mile from Tempe Marketplace, at the corner of Rio Salado Pkwy and McClintock. Drop off your vehicle for detailing",
+        num: "2"
     },
     {
         image: sunbathe,
         title: "Uber/Lyft",
-        text: "As we don’t have a waiting room, plan accordingly. You’ll receive a text when your vehicle is ready for pickup"
+        text: "As we don’t have a waiting room, plan accordingly. You’ll receive a text when your vehicle is ready for pickup",
+        num: "3"
     },
     {
         image: pickup,
         title: "Pick Up Your Vehicle/See and Feel the Difference",
-        text: "Enjoy a walkthrough of the completed detailing and drive away with a car that looks, smells, and feels like new"
+        text: "Enjoy a walkthrough of the completed detailing and drive away with a car that looks, smells, and feels like new",
+        num: "4"
     }
 ]
 
@@ -247,4 +252,5 @@ export {
     images,
     car,
     fourstep,
+    portraitmain,
 };

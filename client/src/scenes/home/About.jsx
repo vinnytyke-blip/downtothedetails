@@ -44,14 +44,21 @@ const About = () => {
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
               letterSpacing={'0.1em'}
             >
-              Down to the Details LLC began as a mobile detailing company in central Phoenix. In August 2023, we opened our first brick-and-mortar location and have been growing steadily since.
+              Down to the Details LLC started as a mobile detailing company in central Phoenix. We proudly opened our first brick-and-mortar location and have been growing steadily since.
             </Typography>
             <Typography
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
               letterSpacing={'0.1em'}
               marginTop={'20px'}
             >
-              We specialize in comprehensive automotive detailing, going the extra mile to meet clients' needs. We detail luxury cars, sports cars, classics, economy, work, fleet vehicles, motorcycles, and more.
+              We specialize in comprehensive automotive detailing, always going the extra mile to meet our clients' needs. Our expertise covers a wide range of vehicles, including luxury cars, sports cars, classics, economy vehicles, work trucks, fleet vehicles, motorcycles, and more.
+            </Typography>
+            <Typography
+              // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
+              letterSpacing={'0.1em'}
+              marginTop={'20px'}
+            >
+              At Down to the Details LLC, we are committed to providing top-notch service and ensuring every vehicle we touch looks its absolute best.
             </Typography>
           </Box>
         </Box>

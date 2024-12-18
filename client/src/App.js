@@ -9,6 +9,7 @@ import About from "./scenes/home/About";
 import NavBar from './scenes/global/Navbar';
 import Footer from "./scenes/global/Footer";
 import Threestep from "./scenes/home/Threestep";
+import Phonehero from "./scenes/home/Phonehero";
 
 
 const ScrollToTop = () => {

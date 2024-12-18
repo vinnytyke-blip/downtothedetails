@@ -30,8 +30,8 @@ const StepItem = ({ step }) => {
 
   const mediumScreenStyles = {
     ...smallScreenStyles,
-    maxWidth: '700px', // Adjust for mid-sized screens
-    padding: '12px',  // Increase padding slightly
+    maxWidth: '60%', // Adjust for mid-sized screens
+    padding: '2px',  // Increase padding slightly
     gap: '16px',     // Slightly increase gap
     fontSize: '16px', // Increase font size
     flexDirection: 'row',
@@ -59,6 +59,18 @@ const StepItem = ({ step }) => {
             : largeScreenStyles
       }
     >
+      <div
+        style={{
+          position: window.innerWidth <= 1150 ? 'relative' : 'absolute',  // Ensures the step number is in the top left corner
+          top: window.innerWidth <= 1150 ? '' : '10px',
+          left: window.innerWidth <= 1150 ? '' : '10px',
+          padding: '2px 5px',
+          borderRadius: '3px',
+          minWidth: '70px',
+        }}
+      >
+        Step {step.num}
+      </div>
       <img
         src={step.image}
         alt={step.title}
@@ -76,7 +88,7 @@ const StepItem = ({ step }) => {
         {step.title}
       </h3>
 
-      {!(window.innerWidth <= 600) && (
+      {!(window.innerWidth <= 850) && (
         <div
           style={{
             margin: 0,
