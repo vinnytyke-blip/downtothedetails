@@ -68,7 +68,7 @@ const Phonehero = () => {
                                 </Typography>
                             </Box> */}
                             <Box
-                                marginTop='15px'
+                                marginTop='8px'
                                 marginBottom='15px'
                                 display='flex'
                                 alignItems='center'
