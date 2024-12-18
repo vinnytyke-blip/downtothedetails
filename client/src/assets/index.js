@@ -17,6 +17,10 @@ import photo8 from './prophotos/E3D84A4F-031A-46B7-B17D-CE1FF5C87F22.jpg';
 import photo9 from './prophotos/IMG_0760.jpg';
 import photo10 from './prophotos/IMG_1517.jpg';
 import photo11 from './prophotos/IMG_1538.jpg';
+import photo12 from './prophotos/photo12.jpeg';
+import photo13 from './prophotos/photo13.jpeg';
+import photo14 from './prophotos/photo14.jpeg';
+import photo15 from './prophotos/photo15.jpeg';
 import car from './prophotos/car.png'
 import phone from './foursteps/phone-call.png';
 import sunbathe from './foursteps/sunbathing.png';
@@ -206,6 +210,10 @@ const images = [
     photo9,
     photo10,
     photo11,
+    photo12,
+    photo13,
+    photo14,
+    photo15,
 ]
 
 const fourstep = [
