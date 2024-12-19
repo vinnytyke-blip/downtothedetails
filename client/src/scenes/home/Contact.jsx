@@ -49,7 +49,6 @@ export const Contact = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dim background
-                        zIndex: 10, // Ensure it appears above other content
                     }}
                 >
                     <Lottie
@@ -57,16 +56,13 @@ export const Contact = () => {
                             loop: false, // Play the animation only once
                             autoplay: true,
                             animationData: lottieMessage,
-                            rendererSettings: {
-                                preserveAspectRatio: 'xMidYMid slice',
-                            },
+
                         }}
                         height={200}
                         width={200}
                     />
                 </div>
             )}
-
             <div style={{ maxWidth: '600px', margin: '0 auto' }}>
                 <div style={{ marginBottom: '15px' }}>
                     <div style={{ textAlign: 'center' }}>

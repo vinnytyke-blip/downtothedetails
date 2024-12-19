@@ -46,7 +46,7 @@ const Phonehero = () => {
                                 justifyContent="center"
                                 width="70vw" // 90% of the viewport width
                                 maxWidth='650px'
-                                aspectRatio="1" // Ensures it remains a perfect circle
+                                aspectratio="1" // Ensures it remains a perfect circle
                                 overflow="hidden" // Ensures the image doesn’t overflow
                                 marginY='30px'
                                 boxShadow='10px 15px 8px rgba(0, 0, 0, 0.8)'

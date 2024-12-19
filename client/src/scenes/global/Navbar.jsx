@@ -42,7 +42,7 @@ function Navbar() {
       position="fixed"
       top="0"
       left="0"
-      zIndex="999"
+      zindex="999"
     >
       <Box
         width="90%"
@@ -66,7 +66,7 @@ function Navbar() {
         <Box display='flex' alignItems='center'>
           {!breakPoint && (<Box
             display="flex"
-            zIndex="2"
+            zindex="2"
           >
             (<img
               src={toggle ? close : menu}
@@ -75,7 +75,7 @@ function Navbar() {
               height='28px'
               cursor="pointer"
               onClick={() => setToggle(!toggle)}
-              zIndex='1000'
+              zindex='1000'
             />
 
             {toggle && (<Box

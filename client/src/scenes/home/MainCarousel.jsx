@@ -44,7 +44,7 @@ const MainCarousel = () => {
             height='100%'
             alignItems='center'
             justifyContent='center'
-            zIndex='5'
+            zindex='5'
           >
             <Box
               display='flex'
@@ -158,7 +158,7 @@ const MainCarousel = () => {
         {isNonMobile && (
           <Box
             display='flex'
-            zIndex='2'
+            zindex='2'
             width='60%'
             style={{ height: '100%', overflow: 'hidden' }}
             sx={{
@@ -205,7 +205,7 @@ const MainCarousel = () => {
                     right: "0",
                     color: "white",
                     padding: "25px",
-                    zIndex: "10",
+                    zindex: "10",
                     opacity: 0, // Initially hide the arrow
                     transition: "opacity 0.3s", // Add a smooth transition
                   }}
