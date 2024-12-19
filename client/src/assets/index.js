@@ -22,7 +22,13 @@ import photo12 from './prophotos/photo12.jpeg';
 import photo13 from './prophotos/photo13.jpeg';
 import photo14 from './prophotos/photo14.jpeg';
 import photo15 from './prophotos/photo15.jpeg';
-import car from './prophotos/car.png'
+import photo16 from './prophotos/image1.png';
+import photo17 from './prophotos/image2.png';
+import photo18 from './prophotos/image3.png';
+import photo19 from './prophotos/image4.png';
+import photo20 from './prophotos/image5.png';
+import car from './prophotos/car.png';
+import contactus from './prophotos/contactus.png';
 import phone from './foursteps/phone-call.png';
 import sunbathe from './foursteps/sunbathing.png';
 import valet from './foursteps/valet-parking.png';
@@ -215,6 +221,11 @@ const images = [
     photo13,
     photo14,
     photo15,
+    photo16,
+    photo17,
+    photo18,
+    photo19,
+    photo20,
 ]
 
 const fourstep = [
@@ -267,4 +278,5 @@ export {
     portraitmain,
     heroOne,
     heroTwo,
+    contactus,
 };
