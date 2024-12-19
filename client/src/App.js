@@ -41,7 +41,7 @@ function App() {
         <Box position="relative" marginTop='100vh' zindex={2} bgcolor='white'>
           <Threestep />
           <Services />
-          <Membership />
+          {/* <Membership /> */}
           <Quote />
           <About />
           <Testimonials />
