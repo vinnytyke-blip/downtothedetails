@@ -13,6 +13,7 @@ import Footer from "./scenes/global/Footer";
 import Threestep from "./scenes/home/Threestep";
 import Phonehero from "./scenes/home/Phonehero";
 import { Contact } from "./scenes/home/Contact";
+import Membership from "./scenes/home/Membership";
 
 
 const ScrollToTop = () => {
@@ -40,6 +41,7 @@ function App() {
         <Box position="relative" marginTop='100vh' zindex={2} bgcolor='white'>
           <Threestep />
           <Services />
+          <Membership />
           <Quote />
           <About />
           <Testimonials />

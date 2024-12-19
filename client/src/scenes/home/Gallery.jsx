@@ -12,11 +12,17 @@ const Gallery = ({ onClose }) => {
             }
         }
 
-        document.addEventListener("mousedown", handleClickOutside);
+        // Ensure onClose function is defined before setting up the event listener
+        if (onClose) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [onClose]);
+    }, [onClose]); // Include the dependency array to prevent stale references
+
+    if (!galleryRef.current) return null; // Return null if galleryRef is not yet initialized
 
     return (
         <div className="gallery-overlay">
@@ -30,7 +36,7 @@ const Gallery = ({ onClose }) => {
                                 <img
                                     src={image}
                                     style={{ width: '100%', maxHeight: '100%', display: 'block' }}
-                                    alt={`${i}`}
+                                    alt={`Image ${i + 1}`}
                                 />
                             </div>
                         ))}
@@ -38,7 +44,7 @@ const Gallery = ({ onClose }) => {
                 </ResponsiveMasonry>
             </div>
         </div>
-    )
+    );
 }
 
 export default Gallery;

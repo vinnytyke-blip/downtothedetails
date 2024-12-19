@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link as ScrollLink } from "react-scroll";
@@ -17,7 +17,6 @@ export const heroTextureImports = importAll(
   require.context("../../assets/logo", false, /\.(png|PNG|jpe?g|svg)$/)
 );
 
-
 function Navbar() {
   const navigate = useNavigate();
   const breakPoint = useMediaQuery("(min-width:560px)");
@@ -29,8 +28,13 @@ function Navbar() {
   const [showGallery, setShowGallery] = useState(false);
 
   const toggleGallery = () => {
-    setShowGallery(!showGallery);
+    console.log("Toggling gallery view, current state:", showGallery);
+    setShowGallery(prevState => !prevState);
   };
+
+  useEffect(() => {
+    console.log("Gallery visibility changed:", showGallery);
+  }, [showGallery]);
 
   return (
     <Box
