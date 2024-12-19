@@ -1,9 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Lottie from 'react-lottie';
+import { lottieMessage } from '../../assets';
 import { contactus } from '../../assets';
 
 export const Contact = () => {
     const form = useRef();
+    const [messageSent, setMessageSent] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -15,6 +18,9 @@ export const Contact = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    setMessageSent(true);
+                    form.current.reset();
+                    setTimeout(() => setMessageSent(false), 3000); // Hide message after 3 seconds
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -31,13 +37,43 @@ export const Contact = () => {
                 position: 'relative',
             }}
         >
+            {messageSent && (
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dim background
+                        zIndex: 10, // Ensure it appears above other content
+                    }}
+                >
+                    <Lottie
+                        options={{
+                            loop: false, // Play the animation only once
+                            autoplay: true,
+                            animationData: lottieMessage,
+                            rendererSettings: {
+                                preserveAspectRatio: 'xMidYMid slice',
+                            },
+                        }}
+                        height={200}
+                        width={200}
+                    />
+                </div>
+            )}
+
             <div style={{ maxWidth: '600px', margin: '0 auto' }}>
                 <div style={{ marginBottom: '15px' }}>
                     <div style={{ textAlign: 'center' }}>
                         <img
-                            src={contactus} // Replace with your image path
+                            src={contactus}
                             alt="Appointment Icon"
-                            style={{ width: '150px', height: '150px' }} // Adjust size as needed
+                            style={{ width: '150px', height: '150px' }}
                         />
                         <div
                             style={{
@@ -47,7 +83,7 @@ export const Contact = () => {
                             }}
                         >
                             <form ref={form} onSubmit={sendEmail} noValidate>
-                                {/* Row 1 of form */}
+                                {/* Row 1 */}
                                 <div
                                     style={{
                                         display: 'flex',
@@ -61,7 +97,7 @@ export const Contact = () => {
                                             display: 'flex',
                                             flexDirection: 'column',
                                             alignItems: 'flex-start',
-                                            width: '100%', // Make width consistent
+                                            width: '100%',
                                             gap: '10px',
                                         }}
                                     >
@@ -77,7 +113,7 @@ export const Contact = () => {
                                                 boxSizing: 'border-box',
                                                 marginBottom: '10px',
                                                 backgroundColor: 'white',
-                                                color: 'black', // Ensure text is readable
+                                                color: 'black',
                                             }}
                                             placeholder="Name"
                                         />
@@ -87,7 +123,7 @@ export const Contact = () => {
                                             display: 'flex',
                                             flexDirection: 'column',
                                             alignItems: 'flex-start',
-                                            width: '100%', // Make width consistent
+                                            width: '100%',
                                             gap: '10px',
                                         }}
                                     >
@@ -109,11 +145,11 @@ export const Contact = () => {
                                         />
                                     </div>
                                 </div>
-                                {/* Row 2 of form */}
+                                {/* Row 2 */}
                                 <div
                                     style={{
                                         display: 'flex',
-                                        flexDirection: 'column', // Align with the row above
+                                        flexDirection: 'column',
                                         gap: '15px',
                                         marginBottom: '15px',
                                     }}
@@ -123,7 +159,7 @@ export const Contact = () => {
                                             display: 'flex',
                                             flexDirection: 'column',
                                             alignItems: 'flex-start',
-                                            width: '100%', // Make width consistent
+                                            width: '100%',
                                             gap: '10px',
                                         }}
                                     >
@@ -160,26 +196,9 @@ export const Contact = () => {
                                 </button>
                             </form>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     );
 };
-
-
-
-
-
-
-
-{/* <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
-            <input type="text" name="from_name" />
-            <label>Email</label>
-            <input type="email" name="from_email" />
-            <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
-        </form> */}

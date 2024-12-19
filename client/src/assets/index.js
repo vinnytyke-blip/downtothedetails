@@ -36,6 +36,7 @@ import pickup from './foursteps/rental-car.png';
 import portraitmain from './holder.jpg';
 import heroOne from './heroOne.jpeg';
 import heroTwo from './heroTwo.jpg';
+import lottieMessage from './Animation - 1734629701669.json';
 
 const testimonials = [
     {
@@ -279,4 +280,5 @@ export {
     heroOne,
     heroTwo,
     contactus,
+    lottieMessage,
 };
