@@ -34,7 +34,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <ScrollToTop />
-        <Box position='fixed' >
+        <Box position='fixed' zindex={1}>
           {isPhoneView ? <Phonehero /> : <MainCarousel />}
         </Box>
         <Box position="relative" marginTop='100vh' zindex={2} bgcolor='white'>
