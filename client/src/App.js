@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { BrowserRouter, useLocation } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { rightArrow, downArrow } from "./assets";
 
 import MainCarousel from "./scenes/home/MainCarousel";
 import Testimonials from "./scenes/home/Testimonials";
@@ -14,7 +15,7 @@ import Threestep from "./scenes/home/Threestep";
 import Phonehero from "./scenes/home/Phonehero";
 import { Contact } from "./scenes/home/Contact";
 import Membership from "./scenes/home/Membership";
-
+import { MemContact } from "./scenes/home/MemContact";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -28,7 +29,21 @@ const ScrollToTop = () => {
 
 function App() {
   const isPhoneView = useMediaQuery('(max-width:650px)');
+  const [showMemContact, setShowMemContact] = useState(false);
 
+  // Create a ref for MemContact component
+  const memContactRef = useRef(null);
+
+  const handleInquireClick = () => {
+    setShowMemContact(prevState => !prevState);
+    // Scroll to the MemContact component and center it on the screen
+    if (memContactRef.current) {
+      memContactRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center", // This centers the element on the screen
+      });
+    }
+  };
 
   return (
     <div className="app">
@@ -41,7 +56,56 @@ function App() {
         <Box position="relative" marginTop='100vh' zindex={2} bgcolor='white'>
           <Threestep />
           <Services />
-          {/* <Membership /> */}
+          <Membership />
+          <button
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: '50px',
+              width: '100%',
+              backgroundColor: 'black',
+              color: 'white',
+              border: 'none',
+              fontSize: '16px',
+              cursor: 'pointer',
+              gap: '20px',
+            }}
+            onClick={handleInquireClick}
+          >
+            <Typography
+              sx={{
+                letterSpacing: '2px',
+                fontSize: '20px',
+                fontWeight: 300,
+              }}
+            >
+              Inquire About Membership
+            </Typography>
+            <img
+              src={showMemContact ? downArrow : rightArrow}
+              alt="right arrow png"
+              style={{
+                width: '35px',
+                height: '35px',
+              }}
+            />
+          </button>
+
+          <div
+            style={{
+              maxHeight: showMemContact ? '800px' : '0', // Adjust 1000px to a reasonable max height based on your content
+              overflow: 'hidden', // Hide overflow when collapsed
+              transition: 'max-height 1s ease-in-out',
+              visibility: showMemContact ? 'visible' : 'hidden',
+            }}
+          >
+            {/* Attach the ref to MemContact component */}
+            <div ref={memContactRef}>
+              {showMemContact && <MemContact />}
+            </div>
+          </div>
+
           <Quote />
           <About />
           <Testimonials />
@@ -49,7 +113,7 @@ function App() {
           <Footer />
         </Box>
       </BrowserRouter>
-    </div >
+    </div>
   );
 }
 

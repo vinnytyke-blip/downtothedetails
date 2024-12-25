@@ -13,10 +13,10 @@ const StepItem = ({ step }) => {
   const smallScreenStyles = {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     gap: '14px',
     padding: '10px',
-    maxWidth: '175px',
+    maxWidth: '210px',
     borderRadius: '8px',
     margin: 'auto',
     flexDirection: 'row',
@@ -66,7 +66,7 @@ const StepItem = ({ step }) => {
           left: window.innerWidth <= 1150 ? '' : '10px',
           padding: '2px 5px',
           borderRadius: '3px',
-          minWidth: '70px',
+          minWidth: '170px',
         }}
       >
         Step {step.num}
@@ -94,6 +94,10 @@ const StepItem = ({ step }) => {
             margin: 0,
             lineHeight: '1.5',
             maxHeight: '200px',
+            overflow: 'hidden', // Prevent overflow
+            textOverflow: 'ellipsis', // Add ellipsis for overflowing text
+            wordWrap: 'break-word', // Ensure long words break properly
+            minWidth: '100%'
           }}
         >
           {step.text}

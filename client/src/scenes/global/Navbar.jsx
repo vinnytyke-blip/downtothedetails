@@ -20,8 +20,6 @@ export const heroTextureImports = importAll(
 function Navbar() {
   const navigate = useNavigate();
   const breakPoint = useMediaQuery("(min-width:560px)");
-  const breakPointTwo = useMediaQuery("(min-width:1090px)");
-  const showTypography = breakPointTwo; // Show Typography when breakPoint is false (screen width < 600px)
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('');
   const logo = heroTextureImports["IMG_5789.PNG"];

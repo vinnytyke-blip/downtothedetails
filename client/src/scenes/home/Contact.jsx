@@ -40,15 +40,16 @@ export const Contact = () => {
             {messageSent && (
                 <div
                     style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
+                        position: 'fixed', // Fixes the position relative to the screen
+                        top: '50%', // Centers vertically
+                        left: '50%', // Centers horizontally
+                        transform: 'translate(-50%, -50%)', // Offsets the element to truly center it
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                         backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dim background
+                        width: '100%',
+                        height: '100%',
                     }}
                 >
                     <Lottie

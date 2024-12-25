@@ -37,6 +37,10 @@ import portraitmain from './holder.jpg';
 import heroOne from './heroOne.jpeg';
 import heroTwo from './heroTwo.jpg';
 import lottieMessage from './Animation - 1734629701669.json';
+import bulletPoint from './bullet-point.png';
+import vipicon from './vipicon.png';
+import rightArrow from './right-arrow.png';
+import downArrow from './down-arrow.png';
 
 const testimonials = [
     {
@@ -56,6 +60,10 @@ const navLinks = [
     {
         id: "services",
         title: "SERVICES",
+    },
+    {
+        id: 'membership',
+        title: 'MEMBERSHIP',
     },
     {
         id: "about",
@@ -151,6 +159,35 @@ const exteriorServicesTwo = [
     { name: 'Compressed Air Dry' },
 ];
 
+const lowMotoService = [
+    { name: 'Seat Removed' },
+    { name: 'Plastic/tape off Batery / air intake / wiring' },
+    { name: 'Overall hand foam wash' },
+    { name: 'Tires and rims cleaned' },
+]
+
+const highMotoService = [
+    { name: 'Seat Removed' },
+    { name: 'Plastic/tape off Batery / air intake / wiring' },
+    { name: 'Overall hand foam wash' },
+    { name: 'Tires and rims cleaned' },
+    { name: 'Engine degreased / cleaned /dress' },
+    { name: 'Frame degreased / cleaned / ploished' },
+]
+const memDetails = [
+    { name: 'Number of Services: 4 auto details over a year (designed for one every 3 months)' },
+    { name: 'Regular Price: 4 Gold Details at $246 each = $984' },
+    { name: 'Discounted Price: $738 for 4 details upfront' },
+    { name: 'Savings: Get 4 details for the price of 3 – save $246 plus tax over a 12-month period!' },
+    { name: 'Validity: Offer is valid for a 12-month span from the date of purchase.' },
+    { name: 'Terms: All purchases are final.' },
+]
+
+const whyMem = [
+    { name: 'Cost-Effective: Enjoy significant savings by paying upfront.' },
+    { name: 'Convenient: Schedule your details every 3 months or as needed.' },
+    { name: 'Comprehensive Care: Ensure your vehicle stays in top condition year-round.' },
+]
 
 const quoteConfig = {
     Gold: {
@@ -272,6 +309,10 @@ export {
     exteriorServices,
     interiorServicesTwo,
     exteriorServicesTwo,
+    lowMotoService,
+    highMotoService,
+    memDetails,
+    whyMem,
     quoteConfig,
     images,
     car,
@@ -281,4 +322,8 @@ export {
     heroTwo,
     contactus,
     lottieMessage,
+    bulletPoint,
+    vipicon,
+    rightArrow,
+    downArrow,
 };

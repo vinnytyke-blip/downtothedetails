@@ -1,4 +1,3 @@
-
 import { Box, Button, Typography } from "@mui/material";
 import { car, instaphoto, tiktok, heroTwo } from '../../assets';
 import React from 'react';
