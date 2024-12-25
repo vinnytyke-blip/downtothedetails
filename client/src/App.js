@@ -57,40 +57,47 @@ function App() {
           <Threestep />
           <Services />
           <Membership />
-          <button
+          <div
             style={{
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center',
-              height: '50px',
-              width: '100%',
-              backgroundColor: 'black',
-              color: 'white',
-              border: 'none',
-              fontSize: '16px',
-              cursor: 'pointer',
-              gap: '20px',
             }}
-            onClick={handleInquireClick}
           >
-            <Typography
-              sx={{
-                letterSpacing: '2px',
-                fontSize: '20px',
-                fontWeight: 300,
-              }}
-            >
-              Inquire About Membership
-            </Typography>
-            <img
-              src={showMemContact ? downArrow : rightArrow}
-              alt="right arrow png"
+            <button
               style={{
-                width: '35px',
-                height: '35px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '50px',
+                backgroundColor: 'black',
+                boxShadow: '0px 7px 8px rgba(0, 0, 0, 0.8)',
+                color: 'white',
+                border: 'none',
+                fontSize: '16px',
+                cursor: 'pointer',
+                gap: '20px',
               }}
-            />
-          </button>
+              onClick={handleInquireClick}
+            >
+              <Typography
+                sx={{
+                  letterSpacing: '2px',
+                  fontSize: '20px',
+                  fontWeight: 300,
+                }}
+              >
+                Inquire About Membership
+              </Typography>
+              <img
+                src={showMemContact ? downArrow : rightArrow}
+                alt="right arrow png"
+                style={{
+                  width: '35px',
+                  height: '35px',
+                }}
+              />
+            </button>
+          </div>
 
           <div
             style={{
