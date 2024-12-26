@@ -91,7 +91,7 @@ const MotorcycleServices = () => {
                         letterSpacing="2px"
                         fontSize='18px'
                     >
-                        $125 Package
+                        $125-$175 Package
                     </Typography>
                 </Box>
                 <Box

@@ -175,19 +175,19 @@ const highMotoService = [
     { name: 'Frame degreased / cleaned / ploished' },
 ]
 const memDetails = [
-    { name: 'Number of Services: 4 auto details over a year (designed for one every 3 months)' },
-    { name: 'Regular Price: 4 Gold Details at $246 each = $984' },
-    { name: 'Discounted Price: $738 for 4 details upfront' },
-    { name: 'Savings: Get 4 details for the price of 3 – save $246 plus tax over a 12-month period!' },
-    { name: 'Validity: Offer is valid for a 12-month span from the date of purchase.' },
-    { name: 'Terms: All purchases are final.' },
-]
+    { name: '4 gold details for the price of 3' },
+    { name: 'Quarterly cleaning for year-round beauty' },
+    { name: 'Emergency detail services' },
+    { name: 'Prepaid service saves a minimum of $246 over 12 months!' },
+    { name: 'Expires 12 Months After Purchase Date' },
+];
+
 
 const whyMem = [
-    { name: 'Cost-Effective: Enjoy significant savings by paying upfront.' },
-    { name: 'Convenient: Schedule your details every 3 months or as needed.' },
-    { name: 'Comprehensive Care: Ensure your vehicle stays in top condition year-round.' },
-]
+    { name: 'Cost-Effective' },
+    { name: 'Convenient' },
+    { name: 'Comprehensive Care' },
+];
 
 const quoteConfig = {
     Gold: {
