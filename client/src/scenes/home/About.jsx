@@ -9,6 +9,7 @@ const About = () => {
       <Box
         display={isNonMobile ? 'flex' : 'block'}
         marginX='auto'
+        marginTop='50px'
         alignItems='center'
         width='100%'
         height='100%'

@@ -56,6 +56,7 @@ function App() {
         <Box position="relative" marginTop='100vh' zindex={2} bgcolor='white'>
           <Threestep />
           <Services />
+          <Quote />
           <Membership />
           <div
             style={{
@@ -112,8 +113,6 @@ function App() {
               {showMemContact && <MemContact />}
             </div>
           </div>
-
-          <Quote />
           <About />
           <Testimonials />
           <Contact />
