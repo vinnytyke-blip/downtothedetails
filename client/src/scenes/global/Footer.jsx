@@ -19,14 +19,14 @@ const Footer = () => {
       >
         <Box
           width={breakPoint ? "80%" : "100%"}
-          display={{sm: 'flex', md: 'flex'}}
-          justifyContent={{md: 'space-between', xs: 'center'}}
-          marginX={{sm: '5px', md: '15px'}}
+          display={{ sm: 'flex', md: 'flex' }}
+          justifyContent={{ md: 'space-between', xs: 'center' }}
+          marginX={{ sm: '5px', md: '15px' }}
           alignItems='center'
         >
-            <Typography fontSize={{ xs: '20px', md: '28px' }} fontWeight='bold'>
-              Down To The Details L.L.C.
-            </Typography>
+          <Typography fontSize={{ xs: '20px', md: '28px' }} fontWeight='bold'>
+            Down To The Details L.L.C.
+          </Typography>
           <Box display='grid' gap='10px' textAlign='left' padding='10px 10px'>
             <Typography fontWeight='bold'>
               Contact Us
@@ -46,7 +46,7 @@ const Footer = () => {
             </Typography>
             <Typography style={{ display: 'flex', alignItems: 'center' }}>
               <LocationOnIcon style={{ marginRight: '5px' }} />
-              1803 E Rio Salado Pkwy # 105, Tempe, AZ 85281
+              2015 E Fifth St Tempe, AZ  85281 United States
             </Typography>
           </Box>
         </Box>
