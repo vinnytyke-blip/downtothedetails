@@ -1,0 +1,118 @@
+import React, { useEffect, useState } from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import Item from "../../component/Item";
+import { Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useDispatch, useSelector } from "react-redux";
+import { setItems } from "../../state";
+
+const ShoppingList = () => {
+    const dispatch = useDispatch();
+    const [value, setValue] = useState("all");
+    const items = useSelector((state) => state.cart.items || []); // Ensure a default empty array
+    const breakPoint = useMediaQuery("(min-width:600px)");
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    async function getItems() {
+        // Log the state to ensure items are being correctly populated
+
+        if (items.length === 0) {  // Only fetch if items are not already loaded
+            try {
+                const response = await fetch(
+                    "http://localhost:1337/api/items?populate=image",
+                    { method: "GET" }
+                );
+                const itemsJson = await response.json();
+
+
+                console.log("Fetched items:", itemsJson); // Log the fetched response
+
+                if (itemsJson.data) {
+                    dispatch(setItems(itemsJson.data));
+                } else {
+                    console.error("Error: No data found in response");
+                }
+            } catch (error) {
+                console.error("Failed to fetch items:", error);
+            }
+        }
+    }
+
+    useEffect(() => {
+        // Ensure items are populated before attempting to filter
+        if (items.length === 0) {
+            getItems();
+        }
+    }, [items]);  // Only run when items are empty or when state changes
+
+
+    const topRatedItems = items.filter(
+        (item) => item.category === "topRated"
+    );
+    const newArrivalsItems = items.filter(
+        (item) => item.category === "newArrivals"
+    );
+    const bestSellersItems = items.filter(
+        (item) => item.category === "bestSellers"
+    );
+
+    return (
+        <Box width="80%" margin="100px auto" paddingY='80px' height='100%'>
+            <Typography variant="h3" textAlign="center">
+                Our Featured <b>Products</b>
+            </Typography>
+            <Tabs
+                textColor="primary"
+                indicatorColor="primary"
+                value={value}
+                onChange={handleChange}
+                centered
+                TabIndicatorProps={{ sx: { display: breakPoint ? "block" : "none" } }}
+                sx={{
+                    m: "25px",
+                    "& .MuiTabs-flexContainer": {
+                        flexWrap: "wrap",
+                    },
+                }}
+            >
+                <Tab label="ALL" value="all" />
+                <Tab label="NEW ARRIVALS" value="newArrivals" />
+                <Tab label="BEST SELLERS" value="bestSellers" />
+                <Tab label="TOP RATED" value="topRated" />
+            </Tabs>
+            <Box
+                margin="0 auto"
+                display="grid"
+                gridTemplateColumns="repeat(auto-fill, 300px)"
+                justifyContent="space-around"
+                rowGap="20px"
+                columnGap="1.33%"
+            >
+                {value === "all" &&
+                    items.map((item) => (
+                        <Item item={item} key={`${item.attributes?.name}-${item.id}`} />
+                    ))}
+                {value === "newArrivals" &&
+                    newArrivalsItems.map((item) => (
+                        <Item item={item} key={`${item.attributes?.name}-${item.id}`} />
+                    ))}
+                {value === "bestSellers" &&
+                    bestSellersItems.map((item) => (
+                        <Item item={item} key={`${item.attributes?.name}-${item.id}`} />
+                    ))}
+                {value === "topRated" &&
+                    topRatedItems.map((item) => (
+                        <Item item={item} key={`${item.attributes?.name}-${item.id}`} />
+                    ))}
+            </Box>
+        </Box>
+    );
+};
+
+export default ShoppingList;
+
