@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <div id="services">
-      <Box width="100%" margin="20px auto" bgcolor="white">
+      <Box width="100%" margin="50px auto" bgcolor="white" paddingTop='50px'>
         <Box display="flex" alignItems="center" justifyContent="center" paddingTop="20px">
           <Typography variant="h2" textAlign="center" letterSpacing="3px">
             SERVICE PACKAGES
@@ -197,7 +197,7 @@ const Services = () => {
           alignItems="center"
         >
           <Typography fontStyle="italic">
-            Disclaimer: Pet Hair will be an up charge of $75
+            Disclaimer: Excessive pet hair may result in a $50 upcharge.
           </Typography>
         </Box>
         <Box

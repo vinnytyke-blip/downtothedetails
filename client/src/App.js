@@ -3,7 +3,6 @@ import { BrowserRouter, useLocation } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { rightArrow, downArrow } from "./assets";
-
 import MainCarousel from "./scenes/home/MainCarousel";
 import Testimonials from "./scenes/home/Testimonials";
 import Services from "./scenes/home/Services";
@@ -54,7 +53,6 @@ function App() {
           {isPhoneView ? <Phonehero /> : <MainCarousel />}
         </Box>
         <Box position="relative" marginTop='100vh' zindex={2} bgcolor='white'>
-          <Threestep />
           <Services />
           <Quote />
           <Membership />
