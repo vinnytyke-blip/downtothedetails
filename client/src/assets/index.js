@@ -1,7 +1,8 @@
 import instaphoto from './prophotos/instagram.png';
 import tiktok from './prophotos/tiktok.png';
 import satisfaction from './prophotos/satisfaction.png';
-import portrait from './prophotos/IMG_6599.jpeg';
+import portrait from './prophotos/IMG_0760.jpg'; 
+
 import checked from './prophotos/acceptb.png';
 import greenCheck from './prophotos/accept.png';
 import menu from './prophotos/menu.svg';
