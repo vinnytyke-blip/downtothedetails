@@ -290,7 +290,6 @@ export {
     memDetails,
     whyMem,
     quoteConfig,
-    images,
     car,
     fourstep,
     portraitmain,
