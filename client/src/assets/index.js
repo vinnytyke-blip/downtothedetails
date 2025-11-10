@@ -7,26 +7,15 @@ import greenCheck from './prophotos/accept.png';
 import menu from './prophotos/menu.svg';
 import close from './prophotos/close.svg';
 import animationData from './animation_lksxakfb.json';
-import photo1 from './prophotos/IMG_0051.jpeg';
-import photo2 from './prophotos/IMG_0052.jpeg';
-import photo3 from './prophotos/IMG_0053.jpeg';
-import photo4 from './prophotos/IMG_0054.jpeg';
-import photo5 from './prophotos/IMG_0055.jpeg';
-import photo6 from './prophotos/IMG_0056.jpeg';
+
 import photo7 from './prophotos/IMG_0057.jpeg';
 import photo8 from './prophotos/E3D84A4F-031A-46B7-B17D-CE1FF5C87F22.jpg';
 import photo9 from './prophotos/IMG_0760.jpg';
 import photo10 from './prophotos/IMG_1517.jpg';
-import photo11 from './prophotos/IMG_1538.jpg';
-import photo12 from './prophotos/photo12.jpeg';
+
 import photo13 from './prophotos/photo13.jpeg';
 import photo14 from './prophotos/photo14.jpeg';
-import photo15 from './prophotos/photo15.jpeg';
-import photo16 from './prophotos/image1.png';
-import photo17 from './prophotos/image2.png';
-import photo18 from './prophotos/image3.png';
-import photo19 from './prophotos/image4.png';
-import photo20 from './prophotos/image5.png';
+
 import car from './prophotos/car.png';
 import contactus from './prophotos/contactus.png';
 import phone from './foursteps/phone-call.png';
@@ -244,26 +233,12 @@ const quoteConfig = {
 };
 
 const images = [
-    photo1,
-    photo2,
-    photo3,
-    photo4,
-    photo5,
-    photo6,
     photo7,
     photo8,
     photo9,
     photo10,
-    photo11,
-    photo12,
     photo13,
     photo14,
-    photo15,
-    photo16,
-    photo17,
-    photo18,
-    photo19,
-    photo20,
 ]
 
 const fourstep = [
