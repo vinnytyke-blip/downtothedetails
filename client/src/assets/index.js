@@ -240,6 +240,7 @@ const images = [
     photo13,
     photo14,
 ]
+export { images };
 
 const fourstep = [
     {
