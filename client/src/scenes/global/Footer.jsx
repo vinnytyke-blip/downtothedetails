@@ -46,7 +46,7 @@ const Footer = () => {
             </Typography>
             <Typography style={{ display: 'flex', alignItems: 'center' }}>
               <LocationOnIcon style={{ marginRight: '5px' }} />
-              2015 E Fifth St Tempe, AZ  85281 United States
+             <p>Mobile Detailing Across Phoenix & The Valley</p>
             </Typography>
           </Box>
         </Box>
