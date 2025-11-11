@@ -16,6 +16,16 @@ import photo10 from './prophotos/IMG_1517.jpg';
 
 import photo13 from './prophotos/photo13.jpeg';
 import photo14 from './prophotos/photo14.jpeg';
+import audiPaint from './prophotos/audi paint protection.webp';
+import foamCannon from './prophotos/foam cannon wash.webp';
+import foamHand from './prophotos/foam hand wash ats.webp';
+import fullNsx from './prophotos/full detail on nsx.webp';
+import harleyDetail from './prophotos/harley detail.webp';
+import harleyPaint from './prophotos/harley paint correction and ceramic coat.webp';
+import motorcycleDetail from './prophotos/motorcycle detail.webp';
+import porscheWash from './prophotos/porsche maintenance wash + wax.webp';
+import truckPaint from './prophotos/truck paint correction + ceramic coat.webp';
+import corvairMobile from './prophotos/Corvair mobile detail.webp';
 
 import car from './prophotos/car.png';
 import contactus from './prophotos/contactus.png';
@@ -234,12 +244,19 @@ const quoteConfig = {
 };
 
 const images = [
-    photo7,
-    photo8,
-    photo9,
-    photo10,
-    photo13,
-    photo14,
+  photo7,
+  photo8,
+  photo9,
+  photo10,
+  photo13,
+  photo14,
+  audiPaint,
+  foamCannon,
+  foamHand,
+  fullNsx,
+  harleyDetail,
+  harleyPaint,
+  motorcycleDetail,
 ]
 export { images };
 
