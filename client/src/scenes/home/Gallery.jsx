@@ -21,21 +21,24 @@ const Gallery = ({ onClose }) => {
     return (
         <div className="gallery-overlay">
             <div className="gallery-container" ref={galleryRef} style={{ padding: '10px' }}>
-                <ResponsiveMasonry
-                    columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                >
-                    <Masonry gutter="20px">
-                        {images.map((image, i) => (
-                            <div key={i} >
-                                <img
-                                    src={image}
-                                    style={{ width: '100%', maxHeight: '100%', display: 'block' }}
-                                    alt={`${i}`}
-                                />
-                            </div>
-                        ))}
-                    </Masonry>
-                </ResponsiveMasonry>
+                <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+    <Masonry gutter="5px">
+        {images.map((image, index) => (
+            <img
+                key={index}
+                src={image}
+                alt=""
+                style={{
+                    width: "100%",
+                    display: "block",
+                    borderRadius: "8px",
+                    objectFit: "cover",
+                }}
+            />
+        ))}
+    </Masonry>
+</ResponsiveMasonry>
+
             </div>
         </div>
     )
