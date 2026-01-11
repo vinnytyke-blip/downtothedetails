@@ -8,11 +8,7 @@ import greenCheck from './prophotos/accept.png';
 import menu from './prophotos/menu.svg';
 import close from './prophotos/close.svg';
 import animationData from './animation_lksxakfb.json';
-
-import photo7 from './prophotos/IMG_0057.jpeg';
-import photo8 from './prophotos/E3D84A4F-031A-46B7-B17D-CE1FF5C87F22.jpg';
 import photo9 from './prophotos/IMG_0760.jpg';
-import photo10 from './prophotos/IMG_1517.jpg';
 import foamHand from './prophotos/foam hand wash ats.webp';
 import motorcycleDetail from './prophotos/motorcycle detail.webp';
 import porscheWash from './prophotos/porsche maintenance wash + wax.webp';
@@ -235,10 +231,7 @@ const quoteConfig = {
 };
 
 const images = [
-  photo7,
-  photo8,
   photo9,
-  photo10,
   foamHand,
   motorcycleDetail,
 ]
