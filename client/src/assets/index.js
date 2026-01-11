@@ -2,7 +2,12 @@ import instaphoto from './prophotos/instagram.png';
 import tiktok from './prophotos/tiktok.png';
 import satisfaction from './prophotos/satisfaction.png';
 import portrait from './prophotos/IMG_0760.jpg'; 
-
+import baggerMotorcycle from './prophotos/bagger-motorcycle.jpg';
+import corvairInterior from './prophotos/corvair-interior.jpg';
+import hondaCrx from './prophotos/honda-crx.jpg';
+import porscheDetail from './prophotos/porsche-detail.jpg';
+import toyotaTundra from './prophotos/toyota-tundra.jpg';
+import mobileDetail1 from './prophotos/mobile-detail-1.jpg';
 import checked from './prophotos/acceptb.png';
 import greenCheck from './prophotos/accept.png';
 import menu from './prophotos/menu.svg';
@@ -231,6 +236,12 @@ const quoteConfig = {
 };
 
 const images = [
+  porscheDetail,
+  toyotaTundra,
+  hondaCrx,
+  corvairInterior,
+  baggerMotorcycle,
+  mobileDetail1,
   photo9,
   foamHand,
   motorcycleDetail,
