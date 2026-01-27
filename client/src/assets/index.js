@@ -3,7 +3,6 @@ import tiktok from './prophotos/tiktok.png';
 import satisfaction from './prophotos/satisfaction.png';
 import portrait from './prophotos/IMG_0760.jpg'; 
 import baggerMotorcycle from './prophotos/bagger-motorcycle.webp';
-import corvairInterior from './prophotos/corvair-interior.jpg';
 import hondaCrx from './prophotos/honda-crx.jpg';
 import porscheDetail from './prophotos/porsche-detail.jpg';
 import toyotaTundra from './prophotos/toyota-tundra.jpg';
@@ -18,7 +17,6 @@ import foamHand from './prophotos/foam hand wash ats.webp';
 import motorcycleDetail from './prophotos/motorcycle detail.webp';
 import porscheWash from './prophotos/porsche maintenance wash + wax.webp';
 import truckPaint from './prophotos/truck paint correction + ceramic coat.webp';
-import corvairMobile from './prophotos/Corvair mobile detail.webp';
 import car from './prophotos/car.png';
 import contactus from './prophotos/contactus.png';
 import phone from './foursteps/phone-call.png';
@@ -239,7 +237,6 @@ const images = [
   porscheDetail,
   toyotaTundra,
   hondaCrx,
-  corvairInterior,
   baggerMotorcycle,
   mobileDetail1,
   photo9,
