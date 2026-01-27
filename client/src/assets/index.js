@@ -1,7 +1,6 @@
 import instaphoto from './prophotos/instagram.png';
 import tiktok from './prophotos/tiktok.png';
 import satisfaction from './prophotos/satisfaction.png';
-import portrait from './prophotos/IMG_0760.jpg'; 
 import baggerMotorcycle from './prophotos/bagger-motorcycle.webp';
 import hondaCrx from './prophotos/crx.webp';
 import porscheDetail from './prophotos/porsche-detail.jpg.webp';
