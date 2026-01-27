@@ -279,7 +279,6 @@ export {
     instaphoto,
     tiktok,
     satisfaction,
-    portrait,
     checked,
     greenCheck,
     menu,
