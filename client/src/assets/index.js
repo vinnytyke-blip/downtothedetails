@@ -304,6 +304,7 @@ export {
     lottieMessage,
     bulletPoint,
     vipicon,
+      photo9,     
     rightArrow,
     downArrow,
 };
