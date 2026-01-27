@@ -3,6 +3,7 @@ import tiktok from './prophotos/tiktok.png';
 import satisfaction from './prophotos/satisfaction.png';
 import baggerMotorcycle from './prophotos/bagger-motorcycle.webp';
 import hondaCrx from './prophotos/crx.webp';
+import portrait from './prophotos/IMG_0760.jpg';
 import porscheDetail from './prophotos/porsche-detail.jpg.webp';
 import toyotaTundra from './prophotos/toyota-tundra.jpg.webp';
 import mobileDetail1 from './prophotos/mobile-detail-1.jpg.webp';
@@ -304,7 +305,8 @@ export {
     lottieMessage,
     bulletPoint,
     vipicon,
-      photo9,     
+    portrait,
+    photo9,     
     rightArrow,
     downArrow,
 };
