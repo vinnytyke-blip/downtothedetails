@@ -108,7 +108,6 @@ const exteriorServices = {
         { name: 'Spray Wax/Hand Polish for Glossy Finish + Protect the Paint' },
         { name: 'Tire Dressing Applied' },
         { name: 'Plastic Shine Restorer' },
-        { name: 'Paint Decontamination/Clay Bar Treatment' },
         { name: 'Compressed Air Dry' },
     ],
     silver: [
