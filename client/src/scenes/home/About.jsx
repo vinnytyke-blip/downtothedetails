@@ -45,7 +45,7 @@ const About = () => {
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
               letterSpacing={'0.1em'}
             >
-              Down to the Details LLC started as a mobile detailing company in central Phoenix. We proudly opened our first brick-and-mortar location and have been growing steadily since.
+              Down to the Details LLC is a fully mobile detailing service built on convenience and top-tier results. We proudly serve Phoenix, Scottsdale, Tempe, Mesa, Surprise, Glendale, Chandler, and the greater Phoenix metro area — bringing a shop-level detail right to your driveway.
             </Typography>
             <Typography
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
