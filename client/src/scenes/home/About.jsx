@@ -60,6 +60,7 @@ const About = () => {
               marginTop={'20px'}
             >
               At Down to the Details LLC, we don’t rush jobs — we focus on results. Our goal is simple: deliver a detail that makes you proud to drive your vehicle.
+              Owner-operated. Fully mobile. 75+ five-star reviews and counting. We come to you — access to water and electricity within 50 feet is required.
             </Typography>
           </Box>
         </Box>
