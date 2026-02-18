@@ -36,7 +36,7 @@ const About = () => {
             <Typography
               letterSpacing={'0.1em'}
             >
-              We treat every client as a member of our community, listening to their desires to ensure our results meet their expectations.
+              We treat every client like family — delivering consistent, high-quality results with honesty, precision, and attention to detail every single time.
             </Typography>
             <Typography variant="h2" marginTop="20px" lineHeight='1.5' letterSpacing='0.1em'>
               Who Are We:
@@ -45,21 +45,21 @@ const About = () => {
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
               letterSpacing={'0.1em'}
             >
-              Down to the Details LLC is a fully mobile detailing service built on convenience and top-tier results. We proudly serve Phoenix, Scottsdale, Tempe, Mesa, Surprise, Glendale, Chandler, and the greater Phoenix metro area — bringing a shop-level detail right to your driveway.
+              Down to the Details LLC is a fully mobile detailing company serving Surprise, Phoenix, Scottsdale, Tempe, Mesa, Glendale, Chandler, and the surrounding areas. We bring professional, shop-level detailing directly to your home — no drop-offs, no waiting rooms.
             </Typography>
             <Typography
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
               letterSpacing={'0.1em'}
               marginTop={'20px'}
             >
-              We specialize in comprehensive automotive detailing, always going the extra mile to meet our clients' needs. Our expertise covers a wide range of vehicles, including luxury cars, sports cars, classics, economy vehicles, work trucks, fleet vehicles, motorcycles, and more.
+              We specialize in comprehensive automotive detailing for motorcycles, luxury vehicles, daily drivers, work trucks, fleet vehicles, and more.
             </Typography>
             <Typography
               // variant="h4" sx={{ marginTop: '20px', lineHeight: '1.5', letterSpacing: '0.1em' }}
               letterSpacing={'0.1em'}
               marginTop={'20px'}
             >
-              At Down to the Details LLC, we are committed to providing top-notch service and ensuring every vehicle we touch looks its absolute best.
+              At Down to the Details LLC, we don’t rush jobs — we focus on results. Our goal is simple: deliver a detail that makes you proud to drive your vehicle.
             </Typography>
           </Box>
         </Box>
