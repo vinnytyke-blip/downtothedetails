@@ -32,8 +32,7 @@ const Membership = () => {
                     alignItems: 'center',
                 }}
             >
-                <h3>Lock in priority scheduling and save over $246 annually with our prepaid Gold Membership
-                Designed for clients who want their vehicle maintained year-round — not just cleaned once.</h3>
+                <h3>Designed for clients who want their vehicle maintained year-round — not just cleaned once.</h3>
             </div>
             <div
                 style={{
