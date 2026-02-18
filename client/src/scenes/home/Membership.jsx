@@ -22,7 +22,7 @@ const Membership = () => {
                         marginBottom: '1rem',
                     }}
                 >
-                    Membership: Prepaid Package Option
+                    Gold Membership: Priority Detailing Program
                 </h2>
             </div>
             <div
@@ -32,7 +32,8 @@ const Membership = () => {
                     alignItems: 'center',
                 }}
             >
-                <h3>Purchase a set number of services upfront at a discounted rate.</h3>
+                <h3>Lock in priority scheduling and save over $246 annually with our prepaid Gold Membership
+                Designed for clients who want their vehicle maintained year-round — not just cleaned once.</h3>
             </div>
             <div
                 style={{
